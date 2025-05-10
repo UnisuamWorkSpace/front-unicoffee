@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCoffee</title>
+    <link rel="icon" type="image/x-icon" href="/images/uniCoffeeLogo.png"/>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head> 
+<body>
+    <header>
+
+    <div id="mainPageErrorMsg"></div>
+
+    <nav id="navbar" class="navbar">  
+
+        <input type="checkbox" id="check">
+        <label id="menu-check" for="check" class="check-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <div class="navbar-left">
+            <a href="./index.html"><img class="logo" src="./images/modo_claro.png" class="logo"/></a>
+        </div>
+
+        <div id="navbar-center" class="navbar-center ">
+                
+            <div class="dropdown">    
+                <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
+                
+                <div class="dropdown-content cafes-minWidth">
+                    <a href="#moidos">Moídos </a>
+                    <a href="#graos">Em grãos</a>
+                    <a href="#capsulas">Em cápsulas</a>
+                </div>
+            </div>
+
+            <div class="dropdown">     
+                <button id="cafeteria-btn" class="dropdown-btn tamanho-da-fonte">Cafeteiras <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content cafeteira-minWidth">
+                    <a href="#philco">Philco</a>
+                    <a href="#dolceGusto">Dolce Gusto</a>
+                    <a href="#tresCoracoes">Três Corações</a>
+                </div>
+            </div>
+
+            <div class="dropdown">  
+                <button class="dropdown-btn tamanho-da-fonte">Acessórios <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content ">
+                    <a href="#termicas">Garrafas Térmicas</a>
+                    <a href="#filtros">Filtros</a>
+                    <a href="#moedores">Moedores</a>
+                </div>
+            </div>
+                   
+        </div>
+
+        <div class="navbar-right">
+            <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
+            <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
+            <button id="tema"><img src="./images/dark-theme.svg" height="25px"/></button>
+            
+            <div class="usuario-info">
+                <a href="./pages/login.html" class="tamanho-da-fonte">Login</a>
+                <span>|</span>
+                <a href="./pages/cadastro.html" class="tamanho-da-fonte">Cadastre-se</a>
+            </div>        
+        </div>   
+
+    </nav>
+    </header>
+
+    <main>
+        <section class="semMargem">
+            <img src="./images/carrossel.jpg" height="auto" width="100%"/>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h2>Outlet UniCoffee</h2>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/ChatGPT_Image_10_de_mai._de_2025__15_10_28-removebg-preview.png">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>CLÁSSICO</strong></span>
+                    <div class="description-container">
+                        <span>Café equilibrado, com uma textura cremosa e uma acidez moderada, porém presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 37,90</span>
+                        <span class="formerPrice"><s>R$ 51,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/ChatGPT_Image_10_de_mai._de_2025__15_12_07-removebg-preview.png">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Kit 100 Cápsulas + Porta Cápsulas</strong></span>
+                    <div class="description-container">
+                        <span>100 Cápsulas Variadas + Porta Cápsulas de Acrílico Premium</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 309,90</span>
+                        <span class="formerPrice"><s>R$ 339,90</s></span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h2>Tipos de Café</h2>
+            </div>
+
+            <div class="titulo-centralizado">
+                <h3 id="moidos">Cafés Moídos</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/cafe_tucano_moido-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Café Black Tucano Honey Coffee em grãos 250 g</strong></span>
+                    <div class="description-container">
+                        <span>Uma experiência doce e encorpada! Grãos selecionados com processo Honey, que preserva o dulçor natural do café. Ideal para quem busca sabor e aroma marcantes.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 114,90</span>
+                        <span class="formerPrice"><s>R$ 79,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/melitta_tradicional-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Café em Pó Melitta Torrado e Moído Tradicional Pacote 500g</strong></span>
+                    <div class="description-container">
+                        <span>Sabor de casa! Um café equilibrado, com torra média e moagem ideal para o dia a dia. Perfeito para quem ama aquele cafezinho passado no coador.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 109,00</span>
+                        <span class="formerPrice"><s>R$ 74,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/cafe_Moido_arabe-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Coffee Mais │Café Super Especial Torrado e Moído - Clássico │100% Arábica │ Torra Média │250g</strong></span>
+                    <div class="description-container">
+                        <span>Café de origem controlada, 100% Arábica e torra média. Notas suaves, aroma elegante e sabor sofisticado para quem aprecia um café especial de verdade.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 119,00</span>
+                        <span class="formerPrice"><s>R$ 84,90</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="graos">Cafés Em Grãos</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <img class="zoom" src="./images/baggio_2-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Café Gourmet Bourbon Em Grãos 500G</strong></span>
+                    <div class="description-container">
+                        <span>Torrado artesanalmente, possui um paladar definido, com acidez sutil, para apreciadores desta variedade. Apresenta notas gustativas marcantes, corpo e doçura muito presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 69,90</span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <img class="zoom" src="./images/baggio_3.webp" >
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Baggio Café Bourbon 500g - Grãos</strong></span>
+                    <div class="description-container">
+                        <span>Baggio é a expressão máxima de sofisticação e sabor, produzido com grãos 100% arábica da variedade Bourbon, uma das mais nobres do mundo. Cultivado em altitudes elevadas e com torra média cuidadosamente controlada, esse café oferece um sabor equilibrado, aroma intenso e notas sensoriais únicas.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$75,90</span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <img class="zoom" src="./images/baggio_1.webp" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Baggio Café Espresso 500g Grãos </strong></span>
+                    <div class="description-container">
+                        <span>O Baggio Café Especial Espresso é um café especialmente desenvolvido para paladares mais exigentes. Levemente adocicado, com aroma florado e traços frutados, possui um sabor único pronunciado, em um nível muito baixo de amargor.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$79,90</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="capsulas">Cafés Em Cápsulas</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/mobile_hero_6_1-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Kopenhagen Lajotinha 10 Cápsulas</strong></span>
+                    <div class="description-container">
+                        <span>A sofisticação do chocolate Lajotinha da Kopenhagen em uma cápsula de café. Cremoso, levemente adocicado e com toque de avelã.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 84,00</span>
+                        <span class="formerPrice"><s>R$ 115,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Capsula_Tres_coracoes_Tradicionais.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cápsula de Café Filtrado Clássico TRES 3 Corações – 10 Cápsulas</strong></span>
+                    <div class="description-container">
+                        <span>O sabor clássico do café coado, agora em cápsulas TRES. Leve, equilibrado e perfeito para qualquer hora do dia.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 75,90</span>
+                        <span class="formerPrice"><s>R$ 104,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/capsula_orfeu-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>ORFEU Cápsulas De Café Orfeu Intenso Compatível Com Nespresso Contém 20 Unidades</strong></span>
+                    <div class="description-container">
+                        <span>Blend encorpado e marcante, com torra escura e notas intensas. Ideal para quem aprecia cafés fortes e sofisticados. Compatível com máquinas Nespresso.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 82,90</span>
+                        <span class="formerPrice"><s>R$ 109,90</s></span>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+            <div class="titulo-centralizado">
+                <h2>Cafeteiras</h2>
+            </div>
+
+            <div class="titulo-centralizado">
+                <h3 id="philco">Cafeteiras Philco</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Cafeteira_Expresso_Philco_Coffee_Express_-_Inox_-_15_Bar-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Expresso Philco Coffee Express - Inox - 15 Bar</strong></span>
+                    <div class="description-container">
+                        <span>Compacta e eficiente, com 15 bar de pressão e acabamento em inox. Ideal para cafés expressos intensos, espressos duplos e vaporizador para espumar leite.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 689,00</span>
+                        <span class="formerPrice"><s>R$ 949,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/cafeteira_deLado.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Philco 30 Cafezinhos 1L 700W PCFE02</strong></span>
+                    <div class="description-container">
+                        <span>Perfeita para o dia a dia! Prepara até 30 cafezinhos com rapidez e praticidade. Reservatório de 1 litro e design funcional para toda a família.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 189,00</span>
+                        <span class="formerPrice"><s>R$ 279,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom center" src="./images/philco_cafeteira-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Expresso Philco 20 Bar Inox Red Pcf24 Cor Vermelho 220V</strong></span>
+                    <div class="description-container">
+                        <span>Design robusto e elegante, com 20 bar de pressão para extrair o melhor do café. Ideal para quem busca um expresso encorpado e com crema perfeita.</span>
+                    </div>
+                    <div class="price-container ">
+                        <span class="price">R$ 749,00</span>
+                        <span class="formerPrice"><s>R$ 1099,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>   
+            <div class="titulo-centralizado">
+                <h3 id="dolceGusto">Cafeteiras Dolce Gusto</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Genio_S_Touch_Prata_110v.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Genio S Touch Prata 110v</strong></span>
+                    <div class="description-container">
+                        <span>Café equilibrado, com uma textura cremosa e uma acidez moderada, porém presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 449,00</span>
+                        <span class="formerPrice"><s>R$ 699,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/Cafeteira_Eletrica_Arno_Nescafe_Dolce_Gusto_Genio_S_Basic_DGS1_Branca-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Elétrica Arno Nescafé Branca</strong></span>
+                    <div class="description-container">
+                        <span>Tecnologia e praticidade no seu dia a dia. Com design moderno e preparo de bebidas quentes e frias, essa cafeteira garante café de qualidade profissional em casa.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 359,00</span>
+                        <span class="formerPrice"><s>R$ 529,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/Mini_Me_Vermelha_e_Preta_220v-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Mini Me Vermelha e Preta 220v</strong></span>
+                    <div class="description-container">
+                        <span>Café equilibrado, com uma textura cremosa e uma acidez moderada, porém presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 329,90</span>
+                        <span class="formerPrice"><s>R$ 489,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>    
+            <div class="titulo-centralizado">
+                <h3 id="tresCoracoes">Cafeteiras Três Corações</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Cafeteira_Espresso_Barista_Prata_Automatica_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Espresso LOV Preta Automática Logo Cromado - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Máxima performance para quem valoriza café de verdade. A Barista prepara expressos, filtrados e bebidas cremosas com um toque, aliando tecnologia e design sofisticado.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 789,00</span>
+                        <span class="formerPrice"><s>R$ 1.199,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Cafeteira_Espresso_LOV_Preta_Automatica_Logo_Cromado_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Espresso LOV Preta Automática Logo Cromado - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Design elegante e compacto, perfeita para qualquer ambiente. Prepara diversas bebidas com cremosidade e sabor, tudo com um simples toque.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 569,00</span>
+                        <span class="formerPrice"><s>R$ 849,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/Cafeteira_Espresso_Passione_Vermelha_Automatica_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Espresso Passione Vermelha Automática - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Charmosa e eficiente, a Passione une cor vibrante com tecnologia que garante o preparo ideal de cafés, chás e bebidas especiais com cápsulas TRES.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 539,90</span>
+                        <span class="formerPrice"><s>R$ 799,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h2>Kits & Acessórios</h2>
+            </div>
+
+            <div class="titulo-centralizado">
+                <h3 id="termicas">Garrafas Térmicas</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Garrafa_Termica_Aco_Inox_Termopro_3L-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa Térmica Aço Inox Termopro 3L (media)</strong></span>
+                    <div class="description-container">
+                        <span>Maior capacidade e eficiência, perfeita para eventos, escritórios e famílias. Mantém sua bebida quente por horas, com excelente resistência e durabilidade.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 64,90</span>
+                        <span class="formerPrice"><s>R$ 119,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <img class="zoom" src="./images/Garrafa_Termica_Aco_Inox_Termopro_1_9L-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa Térmica Aço Inox Termopro 1,9L</strong></span>
+                    <div class="description-container">
+                        <span>Excelente conservação térmica e resistência, perfeita para quem busca praticidade e qualidade. Ideal para manter suas bebidas quentes ou geladas por mais tempo.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 89,90</span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/garrafa-termica-plastica-1lpreto-mood-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa térmica plástica 1lPreto – Mood</strong></span>
+                    <div class="description-container">
+                        <span>Design moderno e funcional, ideal para o dia a dia. Compacta, leve e eficaz na conservação da temperatura, perfeita para uso pessoal ou em pequenas reuniões.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 34,90</span>
+                        <span class="formerPrice"><s>R$ 49,90</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="filtros">Filtros</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <img class="zoom" src="./images/Filtro_Hario_V60_Branco_40_unidades_Tamanho_02-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Branco 40 unidades Tamanho 02</strong></span>
+                    <div class="description-container">
+                        <span>O Filtro de Papel Hario V60 é essencial para uma extração perfeita no preparo do café. Com formato cônico triangular e vértice de 60 graus, ele garante uma filtragem uniforme, sem obstáculos no fluxo de água, destacando o sabor e aroma da bebida.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 37,90</span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <img class="zoom" src="./images/Filtro_Hario_V60_Natural_40_unidades_Tamanho_01-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Natural 40 unidades Tamanho 01</strong></span>
+                    <div class="description-container">
+                        <span>Exclusivo para os coadores Hario V60 tamanho 01, o filtro de papel em formato de cone e ângulo de 60°, permite a filtragem por igual e não deixa que o fluxo de água encontre qualquer tipo de obstáculo, resultando em uma bebida limpa e saborosa (sem resíduos), além de ressaltar algumas características do grão de café, como acidez e doçura.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 33,90</span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Filtro_Hario_V60_Natural_40_unidades_Tamanho_02-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Natural 40 unidades Tamanho 02</strong></span>
+                    <div class="description-container">
+                        <span>O Filtro de Papel Hario V60 é essencial para garantir uma extração perfeita no preparo do café. Com formato cônico triangular e vértice de 60 graus, ele proporciona uma filtragem uniforme, sem obstáculos no fluxo de água, destacando o sabor e aroma da bebida.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 34,50</span>
+                        <span class="formerPrice"><s>R$ 37,90</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="moedores">Moedores</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Moedor_de_Cafe_Manual_Timemore_C3S_Preto_25_g-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Moedor de Café Manual Timemore C3S Preto 25 g</strong></span>
+                    <div class="description-container">
+                        <span>Descubra a perfeição na moagem de café com o Timemore CS3, um moedor manual projetado para proporcionar a melhor experiência no preparo do seu café, seja para métodos de coagem, espresso ou prensa francesa. Sua construção robusta e design elegante fazem dele a escolha ideal para os apreciadores de café que buscam praticidade e resultados excepcionais</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 700,00</span>
+                        <span class="formerPrice"><s>R$ 850,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="./images/Moedor_de_Cafe_Ariete_Aroma_Coffee_110V-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Moedor de Café Ariete Aroma Coffee 110V</strong></span>
+                    <div class="description-container">
+                        <span>Perfeito para qualquer ambiente com seu design elegante e compacto, o moedor de café Ariete garante a xícara perfeita, do café americano ao espresso. Graças a seu forte moedor cônico e aos 14 níveis de moagem, com o moedor Ariete você sempre pode desfrutar do café mais fresco e saboroso.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 300,00</span>
+                        <span class="formerPrice"><s>R$ 484,99</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="./images/Moedor_de_Cafe_Ajustavel_BlackDecker_220_V-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Moedor de Café Ajustável Black+Decker 220 V</strong></span>
+                    <div class="description-container">
+                        <span>O moedor possui 220 W de potência e botão de pulsar, perfeito para controlar o ponto de moagem e fácil visualização através da tampa transparente. Com capacidade para até 60g de grãos, corpo e lâminas em inox que garantem durabilidade e resistência, além de higienização e muito mais praticidade.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 249,90</span>
+                        <span class="formerPrice"><s>315,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            
+
+    </main>
+
+    <footer> 
+        <div class="institucionais">
+            <h3>Institucional</h3>
+            <ul>
+                <li><span>Política de Privacidade</span></li>
+                <li><span>Quem Somos</span></li>
+                <li><span>Termos de serviço</span></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Atendimento</h3>
+            <div class="atendimento">
+                <h4>E-mail:</h4>
+                <p>sac@Unicoffee.com</p>
+            </div>
+            <div class="atendimento">
+                <h4>Horário de Atendimento:</h4>
+                <p>Segunda à Sexta-Feira 08:00 às 18:00</p>
+            </div>
+            <div class="atendimento">
+                <h4>Contato</h4>
+                <p>Celular:</p>
+                <p>(21) 98368-6824</p>
+                <p>Telefone:</p>
+                <p>(21) 2767-4218</p>
+            </div>
+        </div>
+    </footer>
+    <div class="rodape">
+        <p>Rua José de Brito, 90 - Nova Piumhi - Piumhi/MG</p>
+        <p>Unicoffee LTDA - CNPJ: 46.188.649/0001-89</p>
+        <p>&#169; 2025 by UniCoffee LTDA. All Rights Reserved.</p>
+    </div>
+    
+</body>
+</html>

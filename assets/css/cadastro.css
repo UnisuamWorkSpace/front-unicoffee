@@ -1,7 +1,7 @@
 
 
 body {    
-    background-image: url("/front-unicoffee-main/images/signUpBackground.png");
+    background-image: url("../../images/signUpBackground.png");
     background-repeat: no-repeat;
     background-size: cover;  
 }

@@ -96,17 +96,17 @@
                 <input type="text" id="cidade" name="cidade" placeholder="Cidade:" class="inputStyle"  required/>
                
                 <label class="labelStyle">Login</label>
-                <input type="text" id="login" name="login" minlength="6" maxlength="6" onblur="loginRequirement()" placeholder="Login:" class="inputStyle"  required/>
-                <span id="loginSpan" class="spanStyle">(O login deve conter 6 caracteres alfabéticos)</span>
+                <input type="text" id="login" name="login" minlength="6" maxlength="6" onblur="loginRequirement()" placeholder="O login deve conter 6 caracteres alfabéticos" class="inputStyle"  required/>
+                <span id="loginSpan" class="spanStyle"></span>
                 
                 <label class="labelStyle">Senha</label>
                 <div class="password-wrap">
-                    <input type="password" id="senha" name="senha" minlength="8" maxlength="8"  onblur="passwordRequirement('senha','passwrdRequirementId')" placeholder="Senha:" class="inputStyle"  required/>
+                    <input type="password" id="senha" name="senha" minlength="8" maxlength="8"  onblur="passwordRequirement('senha','passwrdRequirementId')" placeholder="A senha deve conter 8 caracteres alfabéticos" class="inputStyle"  required/>
                     <button type="button" class="toggle-passwd" onclick="showPassword('senha','toggle-img')">
                         <img src="../images/visibilityOff.svg" id="toggle-img"/>
                     </button>
                 </div>
-                <span id="passwrdRequirementId" class="spanStyle">(A senha deve conter 8 caracteres alfabéticos)</span>
+                <span id="passwrdRequirementId" class="spanStyle"></span>
                 
                 <label class="labelStyle">Confirmar Senha</label>
                 <div class="password-wrap">
@@ -132,6 +132,8 @@
 
         </form>
     </main>
+
+    <script src="../JS/cadastro.js"></script>
     
 </body>
 </html>

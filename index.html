@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head> 
 <body>
-    <header>
-
+    
+    <a href="#navbar"><div id="botao-de-subir" class="botao-de-subir"><i class="fas fa-chevron-up"></i></div></a>
     <div id="mainPageErrorMsg"></div>
+
+    <header>
 
     <nav id="navbar" class="navbar">  
 
@@ -61,13 +63,23 @@
         <div class="navbar-right">
             <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
             <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
-            <button id="tema"><img src="./images/dark-theme.svg" height="25px"/></button>
-            
-            <div class="usuario-info">
-                <a href="./pages/login.html" class="tamanho-da-fonte">Login</a>
-                <span>|</span>
-                <a href="./pages/cadastro.html" class="tamanho-da-fonte">Cadastre-se</a>
-            </div>        
+            <button id="tema"><img src="./images/dark-theme.svg" height="25px"/></button> 
+
+             <div class="profile-container">
+                <input type="checkbox" id="profile-check">  
+                <label id="check-profile" class="profile" for="profile-check">
+                   <i class="fas fa-user-circle"></i>
+                   <span id="greeting" class="greeting"></span>
+                </label>
+                
+                <div class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./pages/login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./pages/cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='./index.html' id='logOut' class='tamanho-da-fonte'>Sair</a>
+                </div>
+            </div>
         </div>   
 
     </nav>

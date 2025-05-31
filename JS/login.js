@@ -79,8 +79,9 @@ document.getElementById("loginForm").addEventListener("submit", (event) => {
   
           for(i = 0; i < storedAccounts.length; i++) {
               if(storedAccounts[i].login === login.login && storedAccounts[i].senha === login.senha){
-                  window.location.href = "../index.html";
-                  return;
+                localStorage.setItem('numero', i);
+                window.location.href = "../index.html";
+                return;
               }
           }
 

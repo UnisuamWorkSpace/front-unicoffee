@@ -1,3 +1,26 @@
+const greetingSpan = document.getElementById("greeting");
+if(JSON.parse(localStorage.getItem("numero"))) {   
+    greetingSpan.innerHTML = `Olá, ${JSON.parse(localStorage.getItem("accountData"))[JSON.parse(localStorage.getItem("numero"))].login} !`;   
+}
+
+if(greetingSpan.innerHTML.length > 0) {
+    const opcao = document.querySelectorAll(".opcao");
+    opcao.forEach(opcao => {
+        opcao.classList.add("escondido");
+    });
+    
+    /* document.querySelector(".profile-dropdown").innerHTML = ''; */
+    /* document.querySelector(".profile-dropdown").innerHTML = "<a href='./index.html' id='logOut' class='tamanho-da-fonte'>Sair</a>"; */
+}else {
+    document.getElementById("logOut").classList.add("escondido");
+}
+
+if(document.getElementById("logOut")) {
+document.getElementById("logOut").addEventListener("click", function () {
+    localStorage.removeItem("numero");
+});
+}
+
 let limiteAumentar =  25; 
 let limiteDiminuir = 15;
 document.getElementById("aumentar-fonte").addEventListener("click", () => {
@@ -92,6 +115,7 @@ document.getElementById("tema").addEventListener("click", () => {
         document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_claro.png'  class='logo'/>";
         document.getElementById("menu-check").style.color = "#4B2E2B";
         document.querySelector(".navbar-center").classList.remove("dark-theme");
+        document.querySelector(".profile-dropdown").classList.remove("dark-theme");
 
         document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
             dropdown_content.classList.remove("dark-background");
@@ -114,6 +138,7 @@ document.getElementById("tema").addEventListener("click", () => {
         document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_escuro.png'  class='logo'/>";
         document.getElementById("menu-check").style.color = "burlywood";
         document.querySelector(".navbar-center").classList.add("dark-theme");
+        document.querySelector(".profile-dropdown").classList.add("dark-theme");
 
         document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
             dropdown_content.classList.add("dark-background");
@@ -124,10 +149,17 @@ document.getElementById("tema").addEventListener("click", () => {
 });
 
 window.addEventListener("scroll", () => {
-    const navbar = document.getElementById("navbar");
-    if(window.scrollY > 0) {
-        navbar.classList.add("scroll");
+    const botaoDeSubir = document.getElementById("botao-de-subir");
+    if(window.scrollY >= 636) {
+        botaoDeSubir.classList.add("scroll");
     }else {
-        navbar.classList.remove("scroll");
+        botaoDeSubir.classList.remove("scroll");
+    }
+
+    const navCenter = document.getElementById("navbar-center");
+    if(window.scrollY >= 100) {
+        navCenter.classList.add("top");
+    }else {
+        navCenter.classList.remove("top");
     }
 });

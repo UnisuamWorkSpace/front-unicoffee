@@ -4,6 +4,12 @@ body{
     font-size: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
     background-color: #F5E9D7;
+    transition: background-color 0.5s ease-in-out;
+}
+
+body.dark-theme {
+    background-color: black;
+    color:#deb887;
 }
 
 html {
@@ -446,6 +452,18 @@ div.dropdown-content.cafeteira-minWidth{
     color:white;
 }
 
+.addCart-btn.dark-theme {
+    border: 1px solid #deb887;
+    color:#deb887;
+}
+
+.addCart-btn.dark-theme:hover {
+    background-color: #deb887;
+    border: 2px solid #5C2E10;
+    font-weight: bold;
+    color: #5C2E10;
+}
+
 .itens-container span strong {
     font-size: 15px;
     display:flex;
@@ -482,6 +500,7 @@ div.dropdown-content.cafeteira-minWidth{
 .esgotado {
     font-size: 10px;
     background-color:gainsboro;
+    font-weight: bold;
     color:black;
     padding:5px 15px;
     display: inline-block;
@@ -507,6 +526,20 @@ div.dropdown-content.cafeteira-minWidth{
     opacity: 0.5;
 }
 
+.esgotado-btn.dark-theme {
+    border: 1px solid #deb887;
+    color:#deb887;
+}
+
+.esgotado-btn.dark-theme:hover {
+    background-color: /* #f5e9d7 */ burlywood;
+    color: #5C2E10;
+    border: 2px solid #5C2E10;
+    font-weight: bold;
+}
+
+
+
 .zoom {
     height:290px;
     transition: transform .5s;
@@ -516,6 +549,13 @@ div.dropdown-content.cafeteira-minWidth{
 
 .zoom:hover {
   transform: scale(1.1); 
+}
+.itens-container:has(.esgotado-btn:hover) .zoom {
+    transform: scale(1.1);
+}
+
+.itens-container:has(.addCart-btn:hover) .zoom {
+    transform: scale(1.1);
 }
 
 section{
@@ -588,6 +628,7 @@ footer div ul li a {
     height: 45px;
     width: 45px;
     background-color: black;
+    border: 1px solid white;
     border-radius: 25px;
     position:fixed;
     bottom: 18px;
@@ -599,6 +640,12 @@ footer div ul li a {
     opacity: 0;
     transform: scale(0); 
     transition: opacity 0.3s ease, transform 0.3s ease;  
+}
+
+.botao-de-subir.dark-theme {
+    background-color: #deb887;
+    color:#5C2E10;
+    border: 1px solid #5C2E10;
 }
 
 .botao-de-subir.scroll {

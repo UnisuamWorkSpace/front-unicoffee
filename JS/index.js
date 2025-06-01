@@ -8,9 +8,6 @@ if(greetingSpan.innerHTML.length > 0) {
     opcao.forEach(opcao => {
         opcao.classList.add("escondido");
     });
-    
-    /* document.querySelector(".profile-dropdown").innerHTML = ''; */
-    /* document.querySelector(".profile-dropdown").innerHTML = "<a href='./index.html' id='logOut' class='tamanho-da-fonte'>Sair</a>"; */
 }else {
     document.getElementById("logOut").classList.add("escondido");
 }
@@ -56,6 +53,16 @@ document.getElementById("aumentar-fonte").addEventListener("click", () => {
         links.forEach( (links) => {
             links.style.fontSize = parseFloat(window.getComputedStyle(links, null).getPropertyValue("font-size")) + 1 + "px";
         });
+
+        let span = document.querySelectorAll("span");
+        span.forEach( (span) => {
+            span.style.fontSize = parseFloat(window.getComputedStyle(span, null).getPropertyValue("font-size")) + 1 + "px";
+        });
+
+        let strong = document.querySelectorAll("strong");
+        strong.forEach( (strong) => {
+            strong.style.fontSize = parseFloat(window.getComputedStyle(strong, null).getPropertyValue("font-size")) + 1 + "px";
+        });
     }
 });
 
@@ -91,6 +98,16 @@ document.getElementById("diminuir-fonte").addEventListener("click", () => {
         links.forEach( (links) => {
             links.style.fontSize = parseFloat(window.getComputedStyle(links, null).getPropertyValue("font-size")) - 1 + "px";
         });
+
+        let span = document.querySelectorAll("span");
+        span.forEach( (span) => {
+            span.style.fontSize = parseFloat(window.getComputedStyle(span, null).getPropertyValue("font-size")) -1 + "px";
+        });
+
+        let strong = document.querySelectorAll("strong");
+        strong.forEach( (strong) => {
+            strong.style.fontSize = parseFloat(window.getComputedStyle(strong, null).getPropertyValue("font-size")) - 1 + "px";
+        });
     }
     
 });
@@ -112,14 +129,21 @@ document.getElementById("tema").addEventListener("click", () => {
             a.classList.remove = "dark-theme"; 
         });
 
+        document.body.classList.remove("dark-theme");
         document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_claro.png'  class='logo'/>";
         document.getElementById("menu-check").style.color = "#4B2E2B";
         document.querySelector(".navbar-center").classList.remove("dark-theme");
         document.querySelector(".profile-dropdown").classList.remove("dark-theme");
 
+        document.querySelectorAll(".addCart-btn").forEach((addCart) => {
+            addCart.classList.remove("dark-theme");
+        }); 
+
         document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
             dropdown_content.classList.remove("dark-background");
         });
+
+        document.getElementById("botao-de-subir").classList.remove("dark-theme");
 
         black = false;
     }else {
@@ -135,14 +159,21 @@ document.getElementById("tema").addEventListener("click", () => {
             a.classList.add = "dark-theme";     
         });
 
+        document.body.classList.add("dark-theme");
         document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_escuro.png'  class='logo'/>";
         document.getElementById("menu-check").style.color = "burlywood";
         document.querySelector(".navbar-center").classList.add("dark-theme");
         document.querySelector(".profile-dropdown").classList.add("dark-theme");
 
+        document.querySelectorAll(".esgotado-btn").forEach((addCart) => {
+            addCart.classList.add("dark-theme");
+        }); 
+
         document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
             dropdown_content.classList.add("dark-background");
         });
+
+        document.getElementById("botao-de-subir").classList.add("dark-theme");
         
         black = true;
     }

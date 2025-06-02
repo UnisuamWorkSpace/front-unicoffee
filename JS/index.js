@@ -130,7 +130,7 @@ document.getElementById("tema").addEventListener("click", () => {
         });
 
         document.body.classList.remove("dark-theme");
-        document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_claro.png'  class='logo'/>";
+        document.querySelector(".navbar").classList.remove("dark-theme");
         document.getElementById("menu-check").style.color = "#4B2E2B";
         document.querySelector(".navbar-center").classList.remove("dark-theme");
         document.querySelector(".profile-dropdown").classList.remove("dark-theme");
@@ -144,6 +144,8 @@ document.getElementById("tema").addEventListener("click", () => {
         });
 
         document.getElementById("botao-de-subir").classList.remove("dark-theme");
+        document.querySelector("footer").classList.remove("dark-theme");
+        document.querySelector(".rodape").classList.remove("dark-theme");
 
         black = false;
     }else {
@@ -160,7 +162,7 @@ document.getElementById("tema").addEventListener("click", () => {
         });
 
         document.body.classList.add("dark-theme");
-        document.querySelector("div.navbar-left a").innerHTML = "<img src='./images/modo_escuro.png'  class='logo'/>";
+        document.querySelector(".navbar").classList.add("dark-theme");
         document.getElementById("menu-check").style.color = "burlywood";
         document.querySelector(".navbar-center").classList.add("dark-theme");
         document.querySelector(".profile-dropdown").classList.add("dark-theme");
@@ -174,6 +176,8 @@ document.getElementById("tema").addEventListener("click", () => {
         });
 
         document.getElementById("botao-de-subir").classList.add("dark-theme");
+        document.querySelector("footer").classList.add("dark-theme");
+        document.querySelector(".rodape").classList.add("dark-theme");
         
         black = true;
     }

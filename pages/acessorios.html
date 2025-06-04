@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCoffee</title>
+    <link rel="icon" type="image/x-icon" href="/images/uniCoffeeLogo.png"/>
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="#navbar"><div id="botao-de-subir" class="botao-de-subir"><i class="fas fa-chevron-up"></i></div></a>
+    <div id="mainPageErrorMsg"></div>
+
+    <header>
+
+    <nav id="navbar" class="navbar">  
+
+        <input type="checkbox" id="check">
+        <label id="menu-check" for="check" class="check-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <div class="navbar-left">
+            <a href="../index.html" class="logo"></a>
+        </div>
+
+        <div id="navbar-center" class="navbar-center ">
+                
+            <div class="dropdown">    
+                <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
+                
+                <div class="dropdown-content cafes-minWidth">
+                    <a href="../index.html#moidos">Moídos </a>
+                    <a href="../index.html#graos">Em grãos</a>
+                    <a href="../index.html#capsulas">Em cápsulas</a>
+                </div>
+            </div>
+
+            <div class="dropdown">     
+                <button id="cafeteria-btn" class="dropdown-btn tamanho-da-fonte">Cafeteiras <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content cafeteira-minWidth">
+                    <a href="./cafeteiras.html">Philco</a>
+                    <a href="./cafeteiras.html#dolceGusto">Dolce Gusto</a>
+                    <a href="./cafeteiras.html#tresCoracoes">Três Corações</a>
+                </div>
+            </div>
+
+            <div class="dropdown">  
+                <button class="dropdown-btn tamanho-da-fonte">Acessórios <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content ">
+                    <a href="#termicas">Garrafas Térmicas</a>
+                    <a href="#filtros">Filtros</a>
+                    <a href="#moedores">Moedores</a>
+                </div>
+            </div>
+                   
+        </div>
+
+        <div class="navbar-right">
+            <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
+            <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
+            <button id="tema"><img src="../images/dark-theme.svg" height="25px"/></button> 
+
+             <div class="profile-container">
+                <input type="checkbox" id="profile-check">  
+                <label id="check-profile" class="profile" for="profile-check">
+                   <i class="fas fa-user-circle"></i>
+                   <span id="greeting" class="greeting"></span>
+                </label>
+                
+                <div class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./pages/login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./pages/cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='./index.html' id='logOut' class='tamanho-da-fonte'>Sair</a>
+                </div>
+            </div>
+        </div>   
+
+    </nav>
+    </header>
+
+    <main>
+
+         <section class="semMargem">
+            <img src="../images/carrossel.jpg" height="700px" width="100%"/>
+        </section>
+
+         <section>
+            <div class="titulo-centralizado">
+                <h2>Kits & Acessórios</h2>
+            </div>
+
+            <div class="titulo-centralizado">
+                <h3 id="termicas">Garrafas Térmicas</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Garrafa_Termica_Aco_Inox_Termopro_3L-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa Térmica Aço Inox Termopro 3L (media)</strong></span>
+                    <div class="description-container">
+                        <span>Maior capacidade e eficiência, perfeita para eventos, escritórios e famílias. Mantém sua bebida quente por horas, com excelente resistência e durabilidade.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 64,90</span>
+                        <span class="formerPrice"><s>R$ 119,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <img class="zoom" src="../images/Garrafa_Termica_Aco_Inox_Termopro_1_9L-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa Térmica Aço Inox Termopro 1,9L</strong></span>
+                    <div class="description-container">
+                        <span>Excelente conservação térmica e resistência, perfeita para quem busca praticidade e qualidade. Ideal para manter suas bebidas quentes ou geladas por mais tempo.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 89,90</span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/garrafa-termica-plastica-1lpreto-mood-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Garrafa térmica plástica 1lPreto – Mood</strong></span>
+                    <div class="description-container">
+                        <span>Design moderno e funcional, ideal para o dia a dia. Compacta, leve e eficaz na conservação da temperatura, perfeita para uso pessoal ou em pequenas reuniões.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 34,90</span>
+                        <span class="formerPrice"><s>R$ 49,90</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="filtros">Filtros</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <img class="zoom" src="../images/Filtro_Hario_V60_Branco_40_unidades_Tamanho_02-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Branco 40 unidades Tamanho 02</strong></span>
+                    <div class="description-container">
+                        <span>O Filtro de Papel Hario V60 é essencial para uma extração perfeita no preparo do café. Com formato cônico triangular e vértice de 60 graus, ele garante uma filtragem uniforme, sem obstáculos no fluxo de água, destacando o sabor e aroma da bebida.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 37,90</span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <img class="zoom" src="../images/Filtro_Hario_V60_Natural_40_unidades_Tamanho_01-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Natural 40 unidades Tamanho 01</strong></span>
+                    <div class="description-container">
+                        <span>Exclusivo para os coadores Hario V60 tamanho 01, o filtro de papel em formato de cone e ângulo de 60°, permite a filtragem por igual e não deixa que o fluxo de água encontre qualquer tipo de obstáculo, resultando em uma bebida limpa e saborosa (sem resíduos), além de ressaltar algumas características do grão de café, como acidez e doçura.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 33,90</span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Filtro_Hario_V60_Natural_40_unidades_Tamanho_02-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Filtro Hario V60 Natural 40 unidades Tamanho 02</strong></span>
+                    <div class="description-container">
+                        <span>O Filtro de Papel Hario V60 é essencial para garantir uma extração perfeita no preparo do café. Com formato cônico triangular e vértice de 60 graus, ele proporciona uma filtragem uniforme, sem obstáculos no fluxo de água, destacando o sabor e aroma da bebida.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 34,50</span>
+                        <span class="formerPrice"><s>R$ 37,90</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h3 id="moedores">Moedores</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Moedor_de_Cafe_Manual_Timemore_C3S_Preto_25_g-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Moedor de Café Manual Timemore C3S Preto 25 g</strong></span>
+                    <div class="description-container">
+                        <span>Descubra a perfeição na moagem de café com o Timemore CS3, um moedor manual projetado para proporcionar a melhor experiência no preparo do seu café, seja para métodos de coagem, espresso ou prensa francesa. Sua construção robusta e design elegante fazem dele a escolha ideal para os apreciadores de café que buscam praticidade e resultados excepcionais</span>
+                    </div>
+                    <div class="frete-gratis"><span>Frete Grátis</span></div>
+                    <div class="price-container">
+                        <span class="price">R$ 700,00</span>
+                        <span class="formerPrice"><s>R$ 850,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="../images/Moedor_de_Cafe_Ariete_Aroma_Coffee_110V-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Moedor de Café Ariete Aroma Coffee 110V</strong></span>
+                    <div class="description-container">
+                        <span>Perfeito para qualquer ambiente com seu design elegante e compacto, o moedor de café Ariete garante a xícara perfeita, do café americano ao espresso. Graças a seu forte moedor cônico e aos 14 níveis de moagem, com o moedor Ariete você sempre pode desfrutar do café mais fresco e saboroso.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 300,00</span>
+                        <span class="formerPrice"><s>R$ 484,99</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Moedor_de_Cafe_Ajustavel_BlackDecker_220_V-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Moedor de Café Ajustável Black+Decker 220 V</strong></span>
+                    <div class="description-container">
+                        <span>O moedor possui 220 W de potência e botão de pulsar, perfeito para controlar o ponto de moagem e fácil visualização através da tampa transparente. Com capacidade para até 60g de grãos, corpo e lâminas em inox que garantem durabilidade e resistência, além de higienização e muito mais praticidade.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 249,90</span>
+                        <span class="formerPrice"><s>315,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    </main>
+
+    <footer> 
+        <div class="institucionais">
+            <h3>Institucional</h3>
+            <ul>
+                <li><span>Política de Privacidade</span></li>
+                <li><span>Quem Somos</span></li>
+                <li><span>Termos de serviço</span></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Atendimento</h3>
+            <div class="atendimento">
+                <h4>E-mail:</h4>
+                <p>sac@Unicoffee.com</p>
+            </div>
+            <div class="atendimento">
+                <h4>Horário de Atendimento:</h4>
+                <p>Segunda à Sexta-Feira 08:00 às 18:00</p>
+            </div>
+            <div class="atendimento">
+                <h4>Contato</h4>
+                <p>Celular:</p>
+                <p>(21) 98368-6824</p>
+                <p>Telefone:</p>
+                <p>(21) 2767-4218</p>
+            </div>
+        </div>
+    </footer>
+    <div class="rodape">
+        <p>Rua José de Brito, 90 - Nova Piumhi - Piumhi/MG</p>
+        <p>Unicoffee LTDA - CNPJ: 46.188.649/0001-89</p>
+        <p>&#169; 2025 by UniCoffee LTDA. All Rights Reserved.</p>
+    </div>
+
+    <script src="../JS/index.js"></script>
+
+</body>
+</html>

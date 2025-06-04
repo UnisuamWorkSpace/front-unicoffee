@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCoffee</title>
+    <link rel="icon" type="image/x-icon" href="/images/uniCoffeeLogo.png"/>
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <a href="#navbar"><div id="botao-de-subir" class="botao-de-subir"><i class="fas fa-chevron-up"></i></div></a>
+    <div id="mainPageErrorMsg"></div>
+
+    <header>
+
+    <nav id="navbar" class="navbar">  
+
+        <input type="checkbox" id="check">
+        <label id="menu-check" for="check" class="check-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <div class="navbar-left">
+            <a href="../index.html" class="logo"></a>
+        </div>
+
+        <div id="navbar-center" class="navbar-center ">
+                
+            <div class="dropdown">    
+                <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
+                
+                <div class="dropdown-content cafes-minWidth">
+                    <a href="../index.html#moidos">Moídos </a>
+                    <a href="../index.html#graos">Em grãos</a>
+                    <a href="../index.html#capsulas">Em cápsulas</a>
+                </div>
+            </div>
+
+            <div class="dropdown">     
+                <button id="cafeteria-btn" class="dropdown-btn tamanho-da-fonte">Cafeteiras <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content cafeteira-minWidth">
+                    <a href="#philco">Philco</a>
+                    <a href="#dolceGusto">Dolce Gusto</a>
+                    <a href="#tresCoracoes">Três Corações</a>
+                </div>
+            </div>
+
+            <div class="dropdown">  
+                <button class="dropdown-btn tamanho-da-fonte">Acessórios <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content ">
+                    <a href="./acessorios.html#termicas">Garrafas Térmicas</a>
+                    <a href="./acessorios.html#filtros">Filtros</a>
+                    <a href="./acessorios.html#moedores">Moedores</a>
+                </div>
+            </div>
+                   
+        </div>
+
+        <div class="navbar-right">
+            <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
+            <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
+            <button id="tema"><img src="../images/dark-theme.svg" height="25px"/></button> 
+
+             <div class="profile-container">
+                <input type="checkbox" id="profile-check">  
+                <label id="check-profile" class="profile" for="profile-check">
+                   <i class="fas fa-user-circle"></i>
+                   <span id="greeting" class="greeting"></span>
+                </label>
+                
+                <div class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./pages/login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./pages/cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='./index.html' id='logOut' class='tamanho-da-fonte'>Sair</a>
+                </div>
+            </div>
+        </div>   
+
+    </nav>
+    </header>
+
+    <main>
+
+         <section class="semMargem">
+            <img src="../images/carrossel.jpg" height="700px" width="100%"/>
+        </section>
+
+        <section>
+            <div class="titulo-centralizado">
+                <h2>Cafeteiras</h2>
+            </div>
+
+            <div class="titulo-centralizado">
+                <h3 id="philco">Cafeteiras Philco</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Cafeteira_Expresso_Philco_Coffee_Express_-_Inox_-_15_Bar-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Expresso Philco Coffee Express - Inox - 15 Bar</strong></span>
+                    <div class="description-container">
+                        <span>Compacta e eficiente, com 15 bar de pressão e acabamento em inox. Ideal para cafés expressos intensos, espressos duplos e vaporizador para espumar leite.</span>
+                    </div>
+                    <div class="frete-gratis"><span>Frete Grátis</span></div>
+                    <div class="price-container">
+                        <span class="price">R$ 689,00</span>
+                        <span class="formerPrice"><s>R$ 949,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="../images/cafeteira_deLado.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Philco 30 Cafezinhos 1L 700W PCFE02</strong></span>
+                    <div class="description-container">
+                        <span>Perfeita para o dia a dia! Prepara até 30 cafezinhos com rapidez e praticidade. Reservatório de 1 litro e design funcional para toda a família.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 189,00</span>
+                        <span class="formerPrice"><s>R$ 279,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom center" src="../images/philco_cafeteira-removebg-preview.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Expresso Philco 20 Bar Inox Red Pcf24 Cor Vermelho 220V</strong></span>
+                    <div class="description-container">
+                        <span>Design robusto e elegante, com 20 bar de pressão para extrair o melhor do café. Ideal para quem busca um expresso encorpado e com crema perfeita.</span>
+                    </div>
+                    <div class="frete-gratis"><span>Frete Grátis</span></div>
+                    <div class="price-container ">
+                        <span class="price">R$ 749,00</span>
+                        <span class="formerPrice"><s>R$ 1099,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>   
+            <div class="titulo-centralizado">
+                <h3 id="dolceGusto">Cafeteiras Dolce Gusto</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Genio_S_Touch_Prata_110v.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Genio S Touch Prata 110v</strong></span>
+                    <div class="description-container">
+                        <span>Café equilibrado, com uma textura cremosa e uma acidez moderada, porém presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 449,00</span>
+                        <span class="formerPrice"><s>R$ 699,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="../images/Cafeteira_Eletrica_Arno_Nescafe_Dolce_Gusto_Genio_S_Basic_DGS1_Branca-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Elétrica Arno Nescafé Branca</strong></span>
+                    <div class="description-container">
+                        <span>Tecnologia e praticidade no seu dia a dia. Com design moderno e preparo de bebidas quentes e frias, essa cafeteira garante café de qualidade profissional em casa.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 359,00</span>
+                        <span class="formerPrice"><s>R$ 529,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="../images/Mini_Me_Vermelha_e_Preta_220v-removebg-preview.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Mini Me Vermelha e Preta 220v</strong></span>
+                    <div class="description-container">
+                        <span>Café equilibrado, com uma textura cremosa e uma acidez moderada, porém presente.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 329,90</span>
+                        <span class="formerPrice"><s>R$ 489,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>    
+            <div class="titulo-centralizado">
+                <h3 id="tresCoracoes">Cafeteiras Três Corações</h3>
+            </div>
+
+            <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Cafeteira_Espresso_Barista_Prata_Automatica_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Espresso LOV Preta Automática Logo Cromado - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Máxima performance para quem valoriza café de verdade. A Barista prepara expressos, filtrados e bebidas cremosas com um toque, aliando tecnologia e design sofisticado.</span>
+                    </div>
+                    <div class="frete-gratis"><span>Frete Grátis</span></div>
+                    <div class="price-container">
+                        <span class="price">R$ 789,00</span>
+                        <span class="formerPrice"><s>R$ 1.199,00</s></span>
+                    </div>
+
+                </div>
+
+                <div class="itens-container">
+                    <div class="promoção">PROMOÇÃO</div>
+                    <img class="zoom" src="../images/Cafeteira_Espresso_LOV_Preta_Automatica_Logo_Cromado_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="addCart-btn">ADICIONAR AO CARRINHO</button>
+                    <span><strong>Cafeteira Espresso LOV Preta Automática Logo Cromado - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Design elegante e compacto, perfeita para qualquer ambiente. Prepara diversas bebidas com cremosidade e sabor, tudo com um simples toque.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 569,00</span>
+                        <span class="formerPrice"><s>R$ 849,90</s></span>
+                    </div>
+
+                </div>
+
+                <div class="outlet-container">
+                <div class="itens-container">
+                    <div class="esgotado">ESGOTADO</div>
+                    <img class="zoom" src="../images/Cafeteira_Espresso_Passione_Vermelha_Automatica_-_TRES_3_Coracoes.png" height="300px">
+                    <button class="esgotado-btn">ESGOTADO</button>
+                    <span><strong>Cafeteira Espresso Passione Vermelha Automática - TRES 3 Corações</strong></span>
+                    <div class="description-container">
+                        <span>Charmosa e eficiente, a Passione une cor vibrante com tecnologia que garante o preparo ideal de cafés, chás e bebidas especiais com cápsulas TRES.</span>
+                    </div>
+                    <div class="price-container">
+                        <span class="price">R$ 539,90</span>
+                        <span class="formerPrice"><s>R$ 799,00</s></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer> 
+        <div class="institucionais">
+            <h3>Institucional</h3>
+            <ul>
+                <li><span>Política de Privacidade</span></li>
+                <li><span>Quem Somos</span></li>
+                <li><span>Termos de serviço</span></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Atendimento</h3>
+            <div class="atendimento">
+                <h4>E-mail:</h4>
+                <p>sac@Unicoffee.com</p>
+            </div>
+            <div class="atendimento">
+                <h4>Horário de Atendimento:</h4>
+                <p>Segunda à Sexta-Feira 08:00 às 18:00</p>
+            </div>
+            <div class="atendimento">
+                <h4>Contato</h4>
+                <p>Celular:</p>
+                <p>(21) 98368-6824</p>
+                <p>Telefone:</p>
+                <p>(21) 2767-4218</p>
+            </div>
+        </div>
+    </footer>
+    <div class="rodape">
+        <p>Rua José de Brito, 90 - Nova Piumhi - Piumhi/MG</p>
+        <p>Unicoffee LTDA - CNPJ: 46.188.649/0001-89</p>
+        <p>&#169; 2025 by UniCoffee LTDA. All Rights Reserved.</p>
+    </div>
+
+    <script src="../JS/index.js"></script>
+
+</body>
+</html>

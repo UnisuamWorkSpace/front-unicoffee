@@ -366,24 +366,26 @@ div.dropdown-content.cafeteira-minWidth{
 }
 
 @media (max-width:576px) {
-
     .navbar-right {
         padding-right: 0;
     }
 
     .navbar-left a {
         height: 40px;
+        
         margin-bottom: 10px;
     }
 
     .navbar-left{
-        justify-content: flex-end;
+        width: 120px;
+        justify-content:center;
     }
 
     #menu-check{
     padding-left: 0;
     }
-
+    
+    
 }
 
 @media (max-width:1412px) {

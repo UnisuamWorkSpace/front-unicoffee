@@ -106,7 +106,7 @@ div.dropdown-content.cafeteira-minWidth{
 }
 
 .navbar-center {
-    flex: 2;
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,6 +378,10 @@ div.dropdown-content.cafeteira-minWidth{
 
     .navbar-left{
         justify-content: flex-end;
+    }
+
+    #menu-check{
+    padding-left: 0;
     }
 
 }

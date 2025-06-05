@@ -112,75 +112,35 @@ document.getElementById("diminuir-fonte").addEventListener("click", () => {
     
 });
 
-let black = false;
-document.getElementById("tema").addEventListener("click", () => {
+function addDarkTheme () {
+    document.getElementById("navbar").classList.add("navbar-shadow");
+        
+    document.body.classList.add("dark-theme");
+        
+    return black = true;
+}
+
+    let black =  JSON.parse(localStorage.getItem('tema'));
     
-     
+    if(black) {
+        addDarkTheme();
+    }
+
+document.getElementById("tema").addEventListener("click", () => {
+    let black =  JSON.parse(localStorage.getItem('tema'));
+    
     if(black){
-        
-        document.getElementById("navbar").classList.remove("dark-theme","navbar-shadow");  
-        
-        document.querySelectorAll("button").forEach((button) => {
-            button.classList.remove("dark-theme"); 
-        });
-        
-        document.querySelectorAll("a").forEach((a) => {
-           
-            a.classList.remove = "dark-theme"; 
-        });
+     
+        document.getElementById("navbar").classList.remove("navbar-shadow");  
 
         document.body.classList.remove("dark-theme");
-        document.querySelector(".navbar").classList.remove("dark-theme");
-        document.getElementById("menu-check").style.color = "#4B2E2B";
-        document.querySelector(".navbar-center").classList.remove("dark-theme");
-        document.querySelector(".profile-dropdown").classList.remove("dark-theme");
-
-        document.querySelectorAll(".addCart-btn").forEach((addCart) => {
-            addCart.classList.remove("dark-theme");
-        }); 
-
-        document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
-            dropdown_content.classList.remove("dark-background");
-        });
-
-        document.getElementById("botao-de-subir").classList.remove("dark-theme");
-        document.querySelector("footer").classList.remove("dark-theme");
-        document.querySelector(".rodape").classList.remove("dark-theme");
 
         black = false;
     }else {
-
-        document.getElementById("navbar").classList.add("dark-theme","navbar-shadow");
-        
-        document.querySelectorAll("button").forEach((button) => {
-            button.classList.add("dark-theme");
-        });
-
-        document.querySelectorAll("a").forEach((a) => {
-              
-            a.classList.add = "dark-theme";     
-        });
-
-        document.body.classList.add("dark-theme");
-        document.querySelector(".navbar").classList.add("dark-theme");
-        document.getElementById("menu-check").style.color = "burlywood";
-        document.querySelector(".navbar-center").classList.add("dark-theme");
-        document.querySelector(".profile-dropdown").classList.add("dark-theme");
-
-        document.querySelectorAll(".esgotado-btn").forEach((addCart) => {
-            addCart.classList.add("dark-theme");
-        }); 
-
-        document.querySelectorAll(".dropdown-content").forEach((dropdown_content) => {
-            dropdown_content.classList.add("dark-background");
-        });
-
-        document.getElementById("botao-de-subir").classList.add("dark-theme");
-        document.querySelector("footer").classList.add("dark-theme");
-        document.querySelector(".rodape").classList.add("dark-theme");
-        
+        addDarkTheme();
         black = true;
     }
+    localStorage.setItem("tema", black);
 });
 
 window.addEventListener("scroll", () => {

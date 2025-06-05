@@ -161,7 +161,7 @@ div.dropdown-content.cafeteira-minWidth{
     background-image: url('../../images/modo_claro.png');
 }
 
-.navbar.dark-theme:hover .navbar-left a {
+body.dark-theme .navbar:hover .navbar-left a {
   background-image: url('../../images/modo_escuro.png');
   
 }
@@ -222,7 +222,7 @@ div.dropdown-content.cafeteira-minWidth{
     display:none;
 }
 
-.dark-theme a{
+body.dark-theme a{
     background-color: black;
     color:#deb887;
 }
@@ -242,29 +242,29 @@ div.dropdown-content.cafeteira-minWidth{
     color:#4B2E2B;
 }
 
-.navbar.dark-theme {
+body.dark-theme .navbar {
     box-shadow: 3px 3px 3px white;
 }
 
-.navbar.dark-theme * {
+body.dark-theme .navbar * {
     color:white;
     background-color: transparent;
     
 }
 
-.navbar.dark-theme:hover {
+body.dark-theme .navbar:hover {
     background-color: black;
     color:#deb887;
     box-shadow: 3px 3px 3px #deb887;
 
 } 
 
-.navbar.dark-theme:hover *{
+body.dark-theme .navbar:hover *{
     background-color: black;
     color:#deb887;
 } 
 
-.navbar.dark-theme .dropdown-content a:hover {
+body.dark-theme .navbar .dropdown-content a:hover {
     background-color: #4B2E2B;
 }
 
@@ -297,7 +297,7 @@ div.dropdown-content.cafeteira-minWidth{
     background-color: #F5E9D7;
    }
 
-   .navbar.dark-theme:hover .navbar-center {
+   body.dark-theme .navbar:hover .navbar-center {
     background-color: black;
    }
 
@@ -372,7 +372,6 @@ div.dropdown-content.cafeteira-minWidth{
 
     .navbar-left a {
         height: 40px;
-        
         margin-bottom: 10px;
     }
 
@@ -487,12 +486,12 @@ div.dropdown-content.cafeteira-minWidth{
     color:white;
 }
 
-.addCart-btn.dark-theme {
+body.dark-theme .addCart-btn {
     border: 1px solid #deb887;
     color:#deb887;
 }
 
-.addCart-btn.dark-theme:hover {
+body.dark-theme .addCart-btn:hover {
     background-color: #deb887;
     border: 2px solid #5C2E10;
     font-weight: bold;
@@ -561,12 +560,12 @@ div.dropdown-content.cafeteira-minWidth{
     opacity: 0.5;
 }
 
-.esgotado-btn.dark-theme {
+body.dark-theme .esgotado-btn {
     border: 1px solid #deb887;
     color:#deb887;
 }
 
-.esgotado-btn.dark-theme:hover {
+body.dark-theme .esgotado-btn:hover {
     background-color: /* #f5e9d7 */ burlywood;
     color: #5C2E10;
     border: 2px solid #5C2E10;
@@ -677,7 +676,7 @@ footer div ul li a {
     transition: opacity 0.3s ease, transform 0.3s ease;  
 }
 
-.botao-de-subir.dark-theme {
+body.dark-theme .botao-de-subir {
     background-color: #deb887;
     color:#5C2E10;
     border: 1px solid #5C2E10;
@@ -726,7 +725,7 @@ footer div ul li a {
     background-color: #deb887;
 }
 
-.profile-dropdown.dark-theme a:hover {
+body.dark-theme .profile-dropdown a:hover {
     background-color: #4b2e2b;
 }
 
@@ -756,23 +755,23 @@ footer div ul li a {
     display:none;
 }
 
-footer.dark-theme {
+body.dark-theme footer {
     background-image: none;
     background-color: black;
     border-top: 1px solid #deb887;
 }
 
-footer.dark-theme * {
+body.dark-theme footer * {
     color:#deb887
 }
 
-.rodape.dark-theme {
+body.dark-theme .rodape {
     background-image: none;
     background-color: black;
     border-top: 1px solid #deb887;
 }
 
-.rodape.dark-theme * {
+body.dark-theme .rodape * {
     color:#deb887
 }
 
@@ -801,6 +800,10 @@ footer.dark-theme * {
 
 }
 
+body.dark-theme .producao-grid-container {
+    background-color: black;
+}
+
 .producao {
     background-color: white;
     grid-row: 2 / 3;
@@ -812,6 +815,10 @@ footer.dark-theme * {
     justify-content: center;
     gap: 20px;
 
+}
+
+body.dark-theme .producao{
+    background-color: #3e1f0d;
 }
 
 .producao * {
@@ -833,6 +840,11 @@ footer.dark-theme * {
     color:black;
     cursor: pointer;
     
+}
+
+body.dark-theme .producao a {
+    background-color: #d2691e;
+    color: #fffaf0;
 }
 
 .producao-img {    

@@ -120,14 +120,14 @@ function addDarkTheme () {
     return black = true;
 }
 
-    let black =  JSON.parse(localStorage.getItem('tema'));
+    let black =  localStorage.getItem('tema') === 'true';
     
     if(black) {
         addDarkTheme();
     }
 
 document.getElementById("tema").addEventListener("click", () => {
-    let black =  JSON.parse(localStorage.getItem('tema'));
+    let black =  localStorage.getItem('tema') === 'true';
     
     if(black){
      

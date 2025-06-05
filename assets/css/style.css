@@ -477,6 +477,7 @@ div.dropdown-content.cafeteira-minWidth{
     transition: background-color 0.5s ease-in-out;
     cursor: pointer;
     width:350px;
+    color:#4B2E2B;
 }
 
 .addCart-btn:hover {
@@ -549,7 +550,7 @@ div.dropdown-content.cafeteira-minWidth{
     background-color: transparent;
     transition: background-color 0.5s ease-in-out;
     width:350px;
-   
+   color:#4B2E2B;
 }
 
 .esgotado-btn:hover {

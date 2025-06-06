@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniCoffee</title>
+    <link rel="stylesheet" href="./assets/css/carousel.css"/>
     <link rel="icon" type="image/x-icon" href="/images/uniCoffeeLogo.png"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="./assets/js/carousel.js" defer></script>
 </head> 
 <body>
     
@@ -33,9 +35,11 @@
                 <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
                 
                 <div class="dropdown-content cafes-minWidth">
-                    <a href="#moidos">Moídos </a>
-                    <a href="#graos">Em grãos</a>
-                    <a href="#capsulas">Em cápsulas</a>
+                    <!-- Aqui foi adicionado o oneclick para acionar a função que muda o title,
+                     pois esses links estão na mesma página e ao clicar neles a página não é recarregada -->
+                    <a href="#moidos" onclick="changeTitle()">Moídos </a>
+                    <a href="#graos" onclick="changeTitle()">Em grãos</a>
+                    <a href="#capsulas" onclick="changeTitle()">Em cápsulas</a>
                 </div>
             </div>
 
@@ -87,6 +91,7 @@
     </header>
 
     <main>
+        <!-- <section class="carousel" id="carousel"></section> -->
         <section class="semMargem">
             <img src="./images/carrossel.jpg" height="auto" width="100%"/>
         </section>
@@ -355,7 +360,8 @@
         <p>Unicoffee LTDA - CNPJ: 46.188.649/0001-89</p>
         <p>&#169; 2025 by UniCoffee LTDA. All Rights Reserved.</p>
     </div>
-    
-    <script src="./JS/index.js"></script>
+    <!-- Aqui em em outros arquivos o index.js está sendo importado como modulo type="module"
+     por conta do modulo feature que é importado por ele. -->
+    <script type="module" src="./assets/js/index.js"></script>
 </body>
 </html>

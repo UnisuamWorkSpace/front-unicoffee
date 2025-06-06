@@ -1,22 +1,25 @@
 const greetingSpan = document.getElementById("greeting");
-if(JSON.parse(localStorage.getItem("numero"))) {   
-    greetingSpan.innerHTML = `Olá, ${JSON.parse(localStorage.getItem("accountData"))[JSON.parse(localStorage.getItem("numero"))].login} !`;   
+
+const numeroRaw = localStorage.getItem("numero");
+const accountDataRaw = localStorage.getItem("accountData");
+
+if (numeroRaw && accountDataRaw) {
+    const numero = JSON.parse(numeroRaw);
+    const accountData = JSON.parse(accountDataRaw);
+
+    if (accountData[numero] && accountData[numero].login) {
+        greetingSpan.innerHTML = `Olá, ${accountData[numero].login} !`;
+    }
 }
 
-if(greetingSpan.innerHTML.length > 0) {
-    const opcao = document.querySelectorAll(".opcao");
-    opcao.forEach(opcao => {
+if (greetingSpan.innerHTML.length > 0) {
+    document.querySelectorAll(".opcao").forEach(opcao => {
         opcao.classList.add("escondido");
     });
-}else {
+} else {
     document.getElementById("logOut").classList.add("escondido");
 }
 
-if(document.getElementById("logOut")) {
-document.getElementById("logOut").addEventListener("click", function () {
-    localStorage.removeItem("numero");
-});
-}
 
 let limiteAumentar =  25; 
 let limiteDiminuir = 15;

@@ -25,12 +25,12 @@
                     <h2>Dados Pessoais:</h2>
 
                     <label class="labelStyle">Nome Completo</label>
-                    <input type="text" id="nomeCompleto" name="nome"  maxlength="80" placeholder="Nome completo:" class="inputStyle" required/>
+                    <input type="text" id="nomeCompleto" class="inputStyle" onkeyup="apenasLetras(event)" name="nome"  maxlength="80" placeholder="Nome completo:" required/>
                     <span id="fName" class="spanStyle"></span>
 
                     <label class="labelStyle">Data de Nascimento</label>
-                    <input type="date" id="aniversario" name="aniversario" class="inputStyle" required/>
-           
+                    <input type="date" id="aniversario" name="aniversario" class="inputStyle" onblur="isValidBirthday(event)" required/>
+                    <span id="dateSpan" class="spanStyle"></span>
                     
                     <div id="checkboxContainer">
 
@@ -44,17 +44,17 @@
                         <input type="radio" name="genero" value="mulher" class="checkboxConfig" id="mulher"/>
                         <label class="checkboxLabel" for="mulher">Mulher</label>
 
-                        <input type="radio" name="genero" value="nao informado" class="checkboxConfig" id="nao-informado"/>
+                        <input type="radio" name="genero" value="nao informado" class="checkboxConfig" id="nao-informado" />
                         <label class="checkboxLabel" for="nao-informado">Prefiro Não Informar</label>
               
                     </div>
 
                     <label class="labelStyle">Nome da Mãe</label>
-                    <input type="text" name="mae" placeholder="Nome da mãe:" class="inputStyle" required/>
+                    <input type="text" name="mae" placeholder="Nome da mãe:" class="inputStyle" onkeyup="apenasLetras(event)" required/>
 
                     <label class="labelStyle">CPF</label>
                     <div id="cpfInputContainer">
-                        <input type="text" id="cpf" name="cpf" placeholder="CPF:" maxlength="14" class="inputStyle" onkeyup="cpfConfig(event)" required/>
+                        <input type="text" id="cpf" name="cpf" placeholder="CPF:" maxlength="14" class="inputStyle" onkeyup="cpfConfig(event)"required/>
                         <span id="cpfError" class="spanStyle"></span>
                     </div>
 

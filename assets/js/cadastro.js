@@ -86,38 +86,82 @@ function validaCPF(cpf) {
 
 if(identifier === "celular") {
 
-  let value = event.target.value;
+
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); 
  
-  if(value.length === 9 ) {
+  value = value.substring(0, 13); 
 
-    value = value.replace(/(\d{2})(\d{1,9})/, "$1-$2");
+  let mask = '(+55) ';
 
-  }else if(value.length === 1 || value.length === 2) {
-
-    value = value.replace(/(\d{1,2})/, "(+55) $1");
-    
+  if (value.length > 2) {
+    mask += value.substring(2, 4); 
+    mask += '-';
+    mask += value.substring(4); 
+  } else {
+    mask += value.substring(2);  
   }
-  
-  event.target.value = value;
+
+  input.value = mask;
   
   }else if (identifier === "telefone") {
 
-    let value = event.target.value;
+   let input = event.target;
+  let value = input.value.replace(/\D/g, ''); 
  
-  if(value.length === 9 ) {
+  value = value.substring(0, 12); 
 
-    value = value.replace(/(\d{2})(\d{1,9})/, "$1-$2");
+  let mask = '(+55) ';
 
-  }else if(value.length === 1 || value.length === 2) {
-
-    value = value.replace(/(\d{1,2})/, "(+55) $1");
-    
+  if (value.length > 2) {
+    mask += value.substring(2, 4); 
+    mask += '-';
+    mask += value.substring(4); 
+  } else {
+    mask += value.substring(2);  
   }
 
-  event.target.value = value;
+  input.value = mask;
 
   }
   };
+
+/*Função pra verificar data de nascimento.*/
+function isValidBirthday (event) {
+
+  let birthDay = new Date(event.target.value);
+  let today = new Date();
+  const minAge = 12;
+  const maxAge = 122;
+
+  let age =  today.getFullYear() - birthDay.getFullYear();
+  let monthDiff =  today.getMonth() - birthDay.getMonth();
+
+  if(monthDiff < 0 || (monthDiff === 0 &&  today.getDate() < birthDay.getDate())) {
+    age--; 
+  }
+  
+  let dateSpan = document.getElementById("dateSpan");
+  
+  if(String(birthDay.getFullYear()).length > 4) {
+    dateSpan.textContent = "Data inválida.";
+  }else if(age < minAge) {
+    dateSpan.textContent = `Você tem que ter no mínimo ${minAge} anos.`;
+  }else if(age > maxAge) {
+    dateSpan.textContent = "Data inválida.";
+  }else {
+    dateSpan.textContent = "";
+  }
+}
+
+/*Função para permitir que o usuário digite apenas letras nos campos de nome completo e nome da mãe.*/
+function apenasLetras(event) {
+  console.log(event.target.value);
+  let value = event.target.value;
+  value = value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ]/g, "");
+  event.target.value = value;
+  
+}  
     
 /* Evento para formatar o campo cep conforme o usuário vai digitando. */
 document.getElementById("cep").addEventListener("keyup", (event) => {
@@ -283,10 +327,11 @@ document.getElementById("limparTelaSignup").addEventListener("click", () => {
   document.getElementById("fName").textContent = "";
   document.getElementById("cpfError").textContent = "";
   document.getElementById("cepError").textContent = "";
-  document.getElementById("loginSpan").textContent = "(O login deve conter 6 caracteres alfabéticos)";
-  document.getElementById("passwrdRequirementId").textContent = "(A senha deve conter 8 caracteres alfabéticos)";
+  document.getElementById("loginSpan").textContent = "";
+  document.getElementById("passwrdRequirementId").textContent = "";
   document.getElementById("spanPasswrd").textContent = "";
   document.getElementById("spanConfirm").textContent = "";
+  document.getElementById("emailSpan").textContent = "";
 
 });
 
@@ -307,6 +352,17 @@ function validateEmail () {
   }
 }
 
+/* evento pra testar se um cpf é válido. */
+document.getElementById("cpf").addEventListener("blur", (event) => {
+   if(validaCPF(event.target.value) === false) {
+    
+    document.getElementById("cpfError").textContent = "CPF inválido! Por favor, insira um CPF válido.";
+      
+    return;
+  }else {
+    document.getElementById("cpfError").textContent = "";
+  }
+})
 
 /* Evento que exibe mensagens de erro caso algo não seja preenchido corretamente,
 cria usuário novo e redireciona pra página de login quando clica no botão de enviar. */

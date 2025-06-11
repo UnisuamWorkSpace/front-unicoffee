@@ -363,11 +363,20 @@ body.dark-theme .navbar .dropdown-content a:hover {
         display:none;   
     }
 
-    .menu-check i {
+    #menu-check i {
         color: black;
         font-size: 40px;   
     }
      
+    .navbar:hover #menu-check i {
+        color: #4b2e2b;
+        font-size: 40px;   
+    }
+
+    body.dark-theme .navbar:hover #menu-check i {
+        color: burlywood;
+        font-size: 40px;   
+    }
 }
 
 @media (max-width:576px) {

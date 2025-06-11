@@ -30,6 +30,10 @@ if (greetingSpan.innerHTML.length > 0) {
     document.getElementById("logOut").classList.add("escondido");
 }
 
+document.getElementById("logOut").addEventListener("click", function () {
+    localStorage.removeItem("numero");
+});
+
 
 let limiteAumentar =  25; 
 let limiteDiminuir = 15;

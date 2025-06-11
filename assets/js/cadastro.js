@@ -72,7 +72,8 @@ function validaCPF(cpf) {
         document.getElementById("rua").value = data.logradouro;
         document.getElementById("complemento").value = data.complemento;
         document.getElementById("bairro").value = data.bairro;
-        document.getElementById("cidade").value = data.localidade;      
+        document.getElementById("cidade").value = data.localidade;    
+        document.getElementById("uf").value = data.uf;  
         });
   });
 

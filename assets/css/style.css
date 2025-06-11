@@ -360,8 +360,12 @@ body.dark-theme .navbar .dropdown-content a:hover {
     }
 
     .greeting {
-        display:none;
-        
+        display:none;   
+    }
+
+    .menu-check i {
+        color: black;
+        font-size: 40px;   
     }
      
 }

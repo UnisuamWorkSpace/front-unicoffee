@@ -796,6 +796,14 @@ body.dark-theme .rodape * {
 
 }
 
+.content-section {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:180px;
+}
+
 .producao-grid-container {
     display:grid;
     grid-template-columns: repeat(8, 1fr);
@@ -943,7 +951,7 @@ body.dark-theme .producao a {
 }
 
 .historia-titulo {
-    margin: 100px 0 20px 0;
+    margin: 0 0 20px 0;
 }
 
 .historia-titulo *{

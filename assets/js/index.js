@@ -22,12 +22,12 @@ if (numeroRaw && accountDataRaw) {
     }
 }
 
-if (greetingSpan.innerHTML.length > 0) {
-    document.querySelectorAll(".opcao").forEach(opcao => {
+if (document.getElementById("greeting").innerHTML.length <= 0) {
+    document.getElementById("logOut").classList.add("escondido");
+} else {
+   document.querySelectorAll(".opcao").forEach(opcao => { 
         opcao.classList.add("escondido");
     });
-} else {
-    document.getElementById("logOut").classList.add("escondido");
 }
 
 document.getElementById("logOut").addEventListener("click", function () {

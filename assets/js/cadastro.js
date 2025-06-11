@@ -144,7 +144,7 @@ function isValidBirthday (event) {
   
   let dateSpan = document.getElementById("dateSpan");
   
-  if(String(birthDay.getFullYear()).length > 4) {
+  if(String(birthDay.getFullYear()).length > 4 || birthDay.getFullYear() >= today.getFullYear()) {
     dateSpan.textContent = "Data inválida.";
   }else if(age < minAge) {
     dateSpan.textContent = `Você tem que ter no mínimo ${minAge} anos.`;
@@ -157,9 +157,8 @@ function isValidBirthday (event) {
 
 /*Função para permitir que o usuário digite apenas letras nos campos de nome completo e nome da mãe.*/
 function apenasLetras(event) {
-  console.log(event.target.value);
   let value = event.target.value;
-  value = value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ]/g, "");
+  value = value.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\s]/g, "");
   event.target.value = value;
   
 }  

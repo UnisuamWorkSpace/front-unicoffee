@@ -1068,7 +1068,7 @@ body.dark-theme .cart-container:hover button * {
     color:#3e1f0d;
 }
 #cart-check:checked ~ .cart-container {
-    display:block;
+    display:flex;
     right: 0;
 }
 

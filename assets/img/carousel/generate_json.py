@@ -7,7 +7,7 @@ def generate_json() -> None:
     """
     init = []
     carousel_dir = './'
-    for file in os.listdir(carousel_dir):
+    for file in sorted(os.listdir(carousel_dir)):
         if file.lower().endswith('.py'):
             continue
         part_dict = {}

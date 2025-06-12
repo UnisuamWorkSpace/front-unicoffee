@@ -5,13 +5,13 @@
     "href": "#"
   },
   {
-    "path": "05_accessories.png",
-    "alt": "Accessories",
+    "path": "02_mug_coffee.png",
+    "alt": "Mug Coffee",
     "href": "#"
   },
   {
-    "path": "07_relaxation.jpg",
-    "alt": "Relaxation",
+    "path": "03_coffee_maker.png",
+    "alt": "Coffee Maker",
     "href": "#"
   },
   {
@@ -20,18 +20,13 @@
     "href": "#"
   },
   {
-    "path": "06_accessories.png",
+    "path": "05_accessories.png",
     "alt": "Accessories",
     "href": "#"
   },
   {
-    "path": "02_mug_coffee.png",
-    "alt": "Mug Coffee",
-    "href": "#"
-  },
-  {
-    "path": "03_coffee_maker.png",
-    "alt": "Coffee Maker",
+    "path": "06_accessories.png",
+    "alt": "Accessories",
     "href": "#"
   }
 ]

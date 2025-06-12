@@ -25,9 +25,6 @@ export function changeTitle() {
             title[0].textContent = `Acessórios | ${defaultTitle}`;
             return;
         }
-        console.log(value);
-        console.log(title[0].textContent);
-        console.log(['moidos', 'graos', 'capsulas'].includes(value));
     }
     // Se o hash não existir ou não corresponder a nenhum dos valores esperados, define o título padrão;
     else {

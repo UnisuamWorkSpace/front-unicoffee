@@ -49,6 +49,7 @@ mainTag.insertBefore(sectionTag, mainTag.firstChild);
 async function setRelativePath() {
     // Setando o caminho do arquivo json que contém os nomes, os hrefs e os alts das imagens;
     const carouselPath = whichRelativePath("data", "carousel.json");
+    console.log(carouselPath);
     // Criando um array para armazenar os caminhos relativos das imagens;
     let endImagePath = [];
     // Buscando o JSON com os caminhos das imagens;

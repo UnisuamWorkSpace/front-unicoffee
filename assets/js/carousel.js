@@ -95,6 +95,9 @@ async function createCarousel() {
         else if (image.alt.toLowerCase() === "coffee maker")
             // Caso a imagem se trate de maquinas de cafe, o link vai para a página de cafeteiras;
             aTag.href = whichRelativePath("pages", "cafeteiras.html#philco");
+        else if (image.alt.toLowerCase() === "unicoffee")
+            // Caso a imagem seja de UniCoffee, o link vai para a página inicial;
+            aTag.href = whichRelativePath("", "index.html");
         else
             // Caso a umagem não seja de nada especifico, o link não recebe um redirecionamento;
             aTag.href = "#";

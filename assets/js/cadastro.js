@@ -128,11 +128,10 @@ if(identifier === "celular") {
   };
 
 /*Função pra verificar data de nascimento.*/
-function isValidBirthday (event) {
-
-  let birthDay = new Date(event.target.value);
+function isValidBirthday (id) {
+  let birthDay = new Date(document.getElementById(id).value);
   let today = new Date();
-  const minAge = 12;
+  const minAge = 18;
   const maxAge = 122;
 
   let age =  today.getFullYear() - birthDay.getFullYear();
@@ -379,6 +378,11 @@ document.getElementById("signupForm").addEventListener("submit", (event) => {
     document.getElementById("fName").textContent = "O campo nome deve ter no mínimo 15 caracteres!";
     return;
     
+  }
+
+  if(isValidBirthday ("aniversario") === false) {
+    document.getElementById("dateSpan").textContent = "Data inválida.";
+    return;
   }
 
   document.getElementById("cpfError").textContent = "";

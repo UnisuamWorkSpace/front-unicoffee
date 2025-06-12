@@ -42,7 +42,12 @@ export function whichRelativePath(folder, file) {
     // Se a pagina atual estiver localizada na riz, o array currentLink terá tamanho 2, pois ele contém o nome da pasta e o nome da pagina atual;
     // Caso a pagina atual esteja dentro de outra pasta na raiz o array currentLink terá tamanho 3, pois ele contém o nome da pasta pai, a pasta atual e o nome da pagina atual;
     // Assim, podemos controlar e acessar as páginas de acordo com o tamanho do array;
-    const depth = currentLink.length -1;
+    let depth;
+    if (window.location.hostname === "unisuamworkspace.github.io") {
+        depth = currentLink.length - 2;
+    } else {
+        depth = currentLink.length - 1;
+    }
     // Com a variável depth conseguimos acessar as páginas de acordo com o tamanho do array e conseguimos definir bem o caminho base(raiz);
     // Aqui se depth é 0 então estamos na raiz, se não ele mostrará a profundidade que estamos a partir da raiz;
     const basePath = "../".repeat(depth);

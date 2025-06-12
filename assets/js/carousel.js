@@ -7,4 +7,27 @@ window.changeTitle = changeTitle;
 // Recuperando o elemento com id "carousel"
 const carouselTag = document.getElementById("carousel");
 
-console.log(carouselTag);
+async function adjustPath() {
+    const currentPage = window.location.pathname.split("/").pop();
+    let pathJson = "";
+    let pathImage = "";
+    if (currentPage === "index.html" || currentPage === "") {
+        pathImage = "./assets/img/carousel/";
+        pathJson = "./assets/data/carousel.json";
+    } else if (currentPage === "acessorios.html" || currentPage === "cafeterias.html") {
+        pathImage = "../assets/img/carousel/";
+        pathJson = "../assets/data/carousel.json";
+    }
+    let endImagePath = [];
+    const dataJson = await fetch(pathJson);
+    const imagesPath = await dataJson.json();
+    imagesPath.forEach((image) => {
+        image.path = pathImage + image.path;
+        endImagePath.push(image);
+    });
+    console.log(pathImage, currentPage);
+    console.log(endImagePath);
+    return endImagePath;
+}
+
+adjustPath()

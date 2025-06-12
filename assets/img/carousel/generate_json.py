@@ -1,25 +1,26 @@
 import os
 import json
 
-def generate_json() -> None:
+def generate_json_paths_file() -> None:
     """
     Generate a JSON file containing the paths of all images in the carousel directory.
     """
-    init = []
-    carousel_dir = './'
-    for file in sorted(os.listdir(carousel_dir)):
-        if file.lower().endswith('.py'):
+    main_array = []
+    images_folder = './'
+    for image in sorted(os.listdir(images_folder)):
+        if image.lower().endswith('.py'):
             continue
-        part_dict = {}
-        part_dict["path"] = file
-        alt = file.split('.')[0].split('_')
-        alt = [x.capitalize() for x in alt]
-        del alt[0]
-        alt = " ".join(alt)
-        part_dict["alt"] = alt
-        part_dict["href"] = "#"
-        init.append(part_dict)
-        pass
+        images_properties = {}
+        images_properties["name"] = image
+        alt_property = image.split('.')[0].split('_')
+        alt_property = [x.capitalize() for x in alt_property]
+        del alt_property[0]
+        alt_property = " ".join(alt_property)
+        images_properties["alt"] = alt_property
+        images_properties["href"] = "#"
+        main_array.append(images_properties)
     with open("../../data/carousel.json", "w") as json_file:
-        json.dump(init, json_file, indent=2)
-generate_json()
+        json.dump(main_array, json_file, indent=2)
+
+if __name__ == "__main__":
+    generate_json_paths_file()

@@ -25,12 +25,20 @@
 .nav {
     position: absolute;
     top: 50%;
+    width: 40px;
     transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(222, 184, 135, 0);
+    color:#e5e5e2;
     border: none;
+    border-radius: 50%;
     padding: 10px;
     cursor: pointer;
     z-index: 2;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-container:hover .nav{
+    background: rgba(222, 184, 135, 0.6);
 }
 
 .prev {
@@ -54,11 +62,21 @@
 .indicator {
     width: 12px;
     height: 12px;
-    background-color: #ccc;
+    background-color: rgba(245, 233, 215, 0.2);
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-container:hover .indicator {
+    background-color: rgba(245, 233, 215, 0.7);
 }
 
 .indicator.active {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-container:hover .indicator.active {
+    background-color: rgba(0, 0, 0, 1);
 }

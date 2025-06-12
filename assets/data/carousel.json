@@ -1,31 +1,31 @@
 [
   {
-    "path": "01_unicoffee.png",
+    "name": "01_unicoffee.png",
     "alt": "Unicoffee",
     "href": "#"
   },
   {
-    "path": "02_mug_coffee.png",
+    "name": "02_mug_coffee.png",
     "alt": "Mug Coffee",
     "href": "#"
   },
   {
-    "path": "03_coffee_maker.png",
+    "name": "03_coffee_maker.png",
     "alt": "Coffee Maker",
     "href": "#"
   },
   {
-    "path": "04_coffee_maker.png",
+    "name": "04_coffee_maker.png",
     "alt": "Coffee Maker",
     "href": "#"
   },
   {
-    "path": "05_accessories.png",
+    "name": "05_accessories.png",
     "alt": "Accessories",
     "href": "#"
   },
   {
-    "path": "06_accessories.png",
+    "name": "06_accessories.png",
     "alt": "Accessories",
     "href": "#"
   }

@@ -59,7 +59,7 @@ async function setRelativePath() {
     // Percorrendo o array de imagens e corrigindo os caminhos relativos;
     imagesPath.forEach((image) => {
         // Corrigindo os caminhos relativos substituindo os caminhos originais pelos caminhos corrigidos de acordo com a página atual;
-        image.name = whichRelativePath("carousel", image.name);
+        image.href = whichRelativePath("carousel", image.name);
         // Adicionando os dicionarios que representam as imagens ao array;
         endImagePath.push(image);
     });
@@ -101,7 +101,7 @@ async function createCarousel() {
         // Criando um novo elemmento html, a tag de imagem;
         const imgTag = document.createElement("img");
         // Definindo o src e o alt da imagem;
-        imgTag.src = image.name;
+        imgTag.src = image.href;
         imgTag.alt = image.alt;
         // Adicionando a tag de imagem na tag de link;
         aTag.appendChild(imgTag);

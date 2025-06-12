@@ -27,7 +27,23 @@
         </div>
 
         <div id="navbar-center" class="navbar-center ">
+            
+            <div id="profile-mobile" class="profile-container profile-container-mobile">
+                <input type="checkbox" id="profile-check-mobile">  
+                <label id="check-profile" class="profile" for="profile-check-mobile">
+                   <i class="fas fa-user-circle"></i>
+                   <span class="greeting"></span>
+                </label>
                 
+            <div id="profile-dropdown-mobile" class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./pages/login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./pages/cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='./index.html' class='tamanho-da-fonte logOut'>Sair</a>
+                </div>
+            </div>
+
             <div class="dropdown">    
                 <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
                 
@@ -61,6 +77,20 @@
         </div>
 
         <div class="navbar-right">
+
+            <input type="checkbox" id="cart-check">
+            <label for="cart-check" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="item-count"></span>
+            </label>
+            <div class="cart-container">
+                <div class="fechar-carrinho">
+                    <span>Carrinho</span>
+                    <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
+                </div>
+                <button class="fechar-pedido" type="button"><i class="fas fa-lock"></i>Fechar Pedido</button>
+            </div>
+
             <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
             <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
             <button id="tema"><img src="../images/dark-theme.svg" height="25px"/></button> 
@@ -88,7 +118,7 @@
     <main>
 
          <section class="semMargem">
-            <img src="../images/carrossel.jpg" height="700px" width="100%"/>
+           <img src="../images/carrossel.jpg" height="auto "width="100%"/>
         </section>
 
         <section>
@@ -287,8 +317,6 @@
         </div>
     </footer>
     <div class="rodape">
-        <p>Rua José de Brito, 90 - Nova Piumhi - Piumhi/MG</p>
-        <p>Unicoffee LTDA - CNPJ: 46.188.649/0001-89</p>
         <p>&#169; 2025 by UniCoffee LTDA. All Rights Reserved.</p>
     </div>
     <!-- Aqui em em outros arquivos o index.js está sendo importado como modulo type="module"

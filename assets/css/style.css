@@ -420,7 +420,8 @@ body.dark-theme .navbar .dropdown-content a:hover {
     top: 120px;   
     left: 0px;
     right: 0px;
-    margin-inline: auto;   
+    margin-inline: auto;  
+    text-align: center; 
 }
 
 #mainPageErrorMsg.show {

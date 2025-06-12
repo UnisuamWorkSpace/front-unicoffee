@@ -332,6 +332,7 @@ document.getElementById("limparTelaSignup").addEventListener("click", () => {
   document.getElementById("spanPasswrd").textContent = "";
   document.getElementById("spanConfirm").textContent = "";
   document.getElementById("emailSpan").textContent = "";
+  document.getElementById("dateSpan").textContent = "";
 
 });
 

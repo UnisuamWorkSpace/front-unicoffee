@@ -7,14 +7,15 @@
     <style>
         html {
             height: 100%;
+            padding:0;
+            margin:0;
         }
         body {
             background-image: url(../images/errorPage.jpeg);
             background-size: cover;
-            background-repeat: no-repeat;
-            height: 100%;
-            font-family: 'Times New Roman', Times, serif;
-            
+            background-position: center center;
+            background-attachment: fixed;
+            font-family: 'Times New Roman', Times, serif;       
         }
 
         .errorPageMsg {
@@ -47,10 +48,36 @@
             color:#F2F2F2;
         }
 
+        .errorImg {
+            width: 100%; 
+            height: 100%; 
+            object-fit: contain; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            z-index: -1;
+            display:none;
+        }
+
+        @media(max-width:785px) {
+            .errorImg {
+                display:block;
+            }
+
+            body {
+                background-image:none;
+                background-color: black;
+            }
+
+        }
+
     </style>
 </head>
 <body>
-    <div class="errorPageMsg">
+    <div>
+        <img src="../images/errorPage.jpeg" class="errorImg" alt="imagem de erro" >
+    </div>
+     <div class="errorPageMsg">
         <a href="../index.html">Voltar para pagina principal</a>
     </div>
 

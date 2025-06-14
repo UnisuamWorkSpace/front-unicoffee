@@ -249,13 +249,24 @@ function updateCartDisplay() {
     const cartContainer = document.querySelector(".cart-container");
 
     // Clear current cart items before rendering the new ones
-    cartContainer.innerHTML = `
+    if(window.location.pathname === "/pages/cafeteiras.html" || window.location.pathname === "/pages/acessorios.html") {
+        cartContainer.innerHTML = `
         <div class="fechar-carrinho">
             <span>Carrinho</span>
             <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
         </div>
-        <button class="fechar-pedido" type="button"><i class="fas fa-lock"></i>Fechar Pedido</button>
+        <a href="./paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
     `;
+    }else {
+        cartContainer.innerHTML = `
+        <div class="fechar-carrinho">
+            <span>Carrinho</span>
+            <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
+        </div>
+        <a href="./pages/paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+    `;
+    }
+    
 
     // Render each item in the cart
     cartItems.forEach(item => {

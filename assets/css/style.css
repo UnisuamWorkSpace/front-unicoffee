@@ -1110,6 +1110,8 @@ body.dark-theme .cart-container:hover button * {
     margin-top: 20px;
     margin-bottom: 30px;
     cursor:not-allowed;
+    text-decoration: none;
+    text-align:center;
 }
 
 .fechar-pedido  *{

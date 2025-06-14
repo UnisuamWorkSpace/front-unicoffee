@@ -292,8 +292,16 @@ body.dark-theme .navbar .dropdown-content a:hover {
     padding:50px 20px 50px 20px;
     box-shadow: 12px 8px 12px 0px rgba(0,0,0,0.2);
     transition: all .5s;
+    background-color: #f5e9d7;
    }
 
+   .navbar-center * {
+    color:#4b2e2b;
+   }
+
+   body.dark-theme .navbar-center {
+    background-color: #000;
+   }
    .navbar-center.top {
     top:0;
    }
@@ -380,7 +388,6 @@ body.dark-theme .navbar .dropdown-content a:hover {
     }
 
     #menu-check i {
-        color: black;
         font-size: 40px;   
     }
      
@@ -1038,7 +1045,8 @@ i.fas.fa-check {
     height:100%;
     top:0;
     right:-100%;
-    background-color: transparent;
+    background-color: #f5e9d7;
+    color:#4b2e2b;
     z-index: 10000000;
     transition: right 0.5s ease; 
     padding:20px;   
@@ -1050,11 +1058,11 @@ i.fas.fa-check {
     display:none;
 }
 
-.cart-container:hover {
-    background-color: #f5e9d7;
+.cart-container *{
+    color:#4b2e2b;
 }
 
-body.dark-theme .cart-container:hover {
+body.dark-theme .cart-container {
     background-color: black;
 }
 
@@ -1106,7 +1114,7 @@ body.dark-theme .cart-container:hover button * {
 
 .fechar-pedido  *{
     font-size: 20px;
-    color:white;
+    color:#4b2e2b;
     font-weight: bold;
 }
 

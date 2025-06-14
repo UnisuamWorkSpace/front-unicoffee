@@ -17,8 +17,7 @@
     <header>
 
     <nav id="navbar" class="navbar">  
-
-        <input type="checkbox" id="check">
+        <input type="checkbox" id="check" data-target="navbar-center" onchange="isChecked(event)">
         <label id="menu-check" for="check" class="check-btn">
             <i class="fas fa-bars"></i>
         </label>
@@ -30,7 +29,7 @@
         <div id="navbar-center" class="navbar-center ">
 
             <div id="profile-mobile" class="profile-container profile-container-mobile">
-                <input type="checkbox" id="profile-check-mobile">  
+                <input type="checkbox" data-target="profile-dropdown-mobile" id="profile-check-mobile" onchange="isChecked(event)">  
                 <label id="check-profile" class="profile" for="profile-check-mobile">
                    <i class="fas fa-user-circle"></i>
                    <span class="greeting"></span>
@@ -79,12 +78,12 @@
 
         <div class="navbar-right">
 
-            <input type="checkbox" id="cart-check">
+ <input type="checkbox" id="cart-check" data-target="cart-container" onchange="isChecked(event)">
             <label for="cart-check" class="cart-icon">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="item-count"></span>
             </label>
-            <div class="cart-container">
+             <div id="cart-container" class="cart-container">
                 <div class="fechar-carrinho">
                     <span>Carrinho</span>
                     <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
@@ -97,13 +96,13 @@
             <button id="tema"><img src="../images/dark-theme.svg" height="25px"/></button> 
 
              <div id="profile-pc" class="profile-container">
-                <input type="checkbox" id="profile-check">  
+                <input type="checkbox" data-target="profle-pc-dropdown" id="profile-check" onchange="isChecked(event)">    
                 <label id="check-profile" class="profile" for="profile-check">
                    <i class="fas fa-user-circle"></i>
                    <span class="greeting"></span>
                 </label>
                 
-                <div class="profile-dropdown">
+                 <div id="profle-pc-dropdown"class="profile-dropdown">
                              
                     <span class="minhaConta">Minha Conta</span>
                     <a href="./login.html" class="tamanho-da-fonte opcao">Login</a>

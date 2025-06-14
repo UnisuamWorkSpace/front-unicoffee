@@ -358,5 +358,22 @@ document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
 // Call the updateCartDisplay function on page load to render the cart items
 window.onload = updateCartDisplay;
 
+window.isChecked = function (event) {
+    let checkBoxId = event.target.id;
+    let checkBox = document.getElementById(checkBoxId);
+    let menu = document.getElementById(`${checkBox.dataset.target}`);
+    let label = document.querySelector(`label[for=${checkBoxId}]`);
+    
+    document.body.addEventListener('click', function (event) {
+    
+        if(event.target === label.children[0]) {
+            return;
+        }
 
-/* a */
+        if(!menu.contains(event.target) && event.target !== checkBox)  {
+            checkBox.checked = false;
+        }
+    
+    });
+    
+};

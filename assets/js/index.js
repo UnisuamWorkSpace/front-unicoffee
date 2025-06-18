@@ -249,7 +249,7 @@ function updateCartDisplay() {
     const cartContainer = document.querySelector(".cart-container");
 
     // Clear current cart items before rendering the new ones
-    if(window.location.pathname === "/pages/cafeteiras.html" || window.location.pathname === "/pages/acessorios.html") {
+    if(window.location.pathname.endsWith("cafeteiras.html") === "/pages/cafeteiras.html" || window.location.pathname.endsWith("acessorios.html") === "/pages/acessorios.html") {
         cartContainer.innerHTML = `
         <div class="fechar-carrinho">
             <span>Carrinho</span>

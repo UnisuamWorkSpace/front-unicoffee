@@ -688,14 +688,29 @@ footer div ul li a {
     padding: 20px;
 }
 
-.atendimento {
-    margin: 0;
-    margin-top: 7px;
-    display: flex;
-}
-
 .institucionais ul li span {
     cursor:pointer;
+
+}
+
+.rod1{
+    
+    text-align: left;
+}
+.rod2{
+    text-align: right;
+    align-self: self-end;
+}
+
+.rod2 span {
+    display:flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.rod2 a {
+    text-decoration: none;
 }
 
 .botao-de-subir {

@@ -145,12 +145,16 @@ function isValidBirthday (id) {
   
   if(String(birthDay.getFullYear()).length > 4 || birthDay.getFullYear() >= today.getFullYear()) {
     dateSpan.textContent = "Data inválida.";
+    return false;
   }else if(age < minAge) {
     dateSpan.textContent = `Você tem que ter no mínimo ${minAge} anos.`;
+    return false;
   }else if(age > maxAge) {
     dateSpan.textContent = "Data inválida.";
+    return false;
   }else {
     dateSpan.textContent = "";
+    return true;
   }
 }
 
@@ -376,12 +380,14 @@ document.getElementById("signupForm").addEventListener("submit", (event) => {
   if(fullNameErrorMsg() === false) {
 
     document.getElementById("fName").textContent = "O campo nome deve ter no mínimo 15 caracteres!";
+    document.getElementById("nomeCompleto").scrollIntoView();
     return;
     
   }
 
   if(isValidBirthday ("aniversario") === false) {
     document.getElementById("dateSpan").textContent = "Data inválida.";
+    document.getElementById("aniversario").scrollIntoView();
     return;
   }
 
@@ -390,22 +396,22 @@ document.getElementById("signupForm").addEventListener("submit", (event) => {
   if(validaCPF(event.target.cpf.value) === false) {
     
     document.getElementById("cpfError").textContent = "CPF inválido! Por favor, insira um CPF válido.";
-      
-    return;
-    
+    document.getElementById("cpf").scrollIntoView();     
+    return;  
   }
 
   if(validateEmail () === false){
+    document.getElementById("emailInput").scrollIntoView();
     return;
   }
 
   if(loginRequirement() === false) {
-
+    document.getElementById("login").scrollIntoView();
     return;
   }
 
   if(confirmadorDeSenha() === false || passwordRequirement('senha', 'passwrdRequirementId') === false) {
-      
+    document.getElementById("senha").scrollIntoView();
     return;
   }
 

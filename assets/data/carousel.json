@@ -1,32 +1,62 @@
 [
   {
-    "name": "01_unicoffee.png",
-    "alt": "Unicoffee",
+    "name": "01_unicoffee_main.png",
+    "alt": "Unicoffee Main",
     "href": "#"
   },
   {
-    "name": "02_mug_coffee.png",
+    "name": "02_unicoffee_main.png",
+    "alt": "Unicoffee Main",
+    "href": "#"
+  },
+  {
+    "name": "03_unicoffee_main.png",
+    "alt": "Unicoffee Main",
+    "href": "#"
+  },
+  {
+    "name": "04_unicoffee_main.png",
+    "alt": "Unicoffee Main",
+    "href": "#"
+  },
+  {
+    "name": "05_mug_coffee.png",
     "alt": "Mug Coffee",
     "href": "#"
   },
   {
-    "name": "03_coffee_maker.png",
+    "name": "06_coffee_maker.png",
     "alt": "Coffee Maker",
     "href": "#"
   },
   {
-    "name": "04_coffee_maker.png",
+    "name": "07_coffee_maker.png",
     "alt": "Coffee Maker",
     "href": "#"
   },
   {
-    "name": "05_accessories.png",
+    "name": "08_accessories.png",
     "alt": "Accessories",
     "href": "#"
   },
   {
-    "name": "06_accessories.png",
+    "name": "09_accessories.png",
     "alt": "Accessories",
+    "href": "#"
+  },
+  {
+    "name": "10_accessories.png",
+    "alt": "Accessories",
+    "href": "#"
+  },
+  {
+    "name": "11_unicoffee_slices.png",
+    "alt": "Unicoffee Slices",
+    "href": "#"
+  },
+  {
+    "name": "12_unicoffee_guide.png",
+    "alt": "Unicoffee Guide",
     "href": "#"
   }
 ]

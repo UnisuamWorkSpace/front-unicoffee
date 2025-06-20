@@ -290,7 +290,7 @@ function updateCartDisplay() {
 
     // Render each item in the cart
     cartItems.forEach(item => {
-        const total = parseFloat(item.price.slice(3).replace(',', '.')) * item.quantity;
+        const total = parseFloat(item.price.replace('R$', '').replace(',', '.')) * item.quantity;
         
         
         
@@ -332,7 +332,7 @@ function updateCartDisplay() {
                     // Update the quantity display
                     cartItem.querySelector("span:nth-child(3)").innerText = `Quantidade: ${item.quantity}`;
 
-                    const total = parseFloat(item.price.slice(3).replace(',', '.')) * item.quantity;
+                    const total = parseFloat(item.price.replace('R$', '').replace(',', '.')) * item.quantity;
 
                     cartItem.querySelector("span:nth-child(4)").innerText = `Quantidade: ${total.toFixed(2).replace('.', ',')}`;
             
@@ -341,7 +341,7 @@ function updateCartDisplay() {
                     // Remove item from cart
                     cartItems.splice(itemIndex, 1);
                     cartItem.remove();
-                    
+                    document.querySelector(".totalDaCompra").innerText = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 }
 
                 // Update localStorage and cart count

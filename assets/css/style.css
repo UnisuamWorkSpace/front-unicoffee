@@ -158,7 +158,7 @@ div.dropdown-content.cafeteira-minWidth{
 }
 
 .navbar:hover .navbar-left a {
-    background-image: url('../../assets/img/theme/modo_claro.svg');
+    background-image: url('../../assets/img/theme/modo_claro.png');
 }
 
 body.dark-theme .navbar:hover .navbar-left a {

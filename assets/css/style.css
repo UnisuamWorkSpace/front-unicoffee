@@ -151,18 +151,18 @@ div.dropdown-content.cafeteira-minWidth{
     margin-bottom: 7px;
     width: 200px;
     height: 60px;
-    background-image: url('../../images/modo_tranparente.png');
+    background-image: url('../../assets/img/theme/modo_tranparente.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: background-image 0.3s ease;
 }
 
 .navbar:hover .navbar-left a {
-    background-image: url('../../images/modo_claro.png');
+    background-image: url('../../assets/img/theme/modo_claro.svg');
 }
 
 body.dark-theme .navbar:hover .navbar-left a {
-  background-image: url('../../images/modo_escuro.png');
+  background-image: url('../../assets/img/theme/modo_escuro.png');
   
   
 }

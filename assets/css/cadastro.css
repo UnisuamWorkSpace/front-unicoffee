@@ -3,7 +3,7 @@ html {
 }
 
 body {    
-    background-image: url("../../images/signUpBackground.png");
+    background-image: url("../../assets/img/backgound/register_background.png");
     background-repeat: no-repeat;
     background-size: cover;  
 }

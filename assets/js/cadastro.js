@@ -183,10 +183,10 @@ function showPassword (inputId, imgId) {
 
   if(passwordInput.type === "password") {
     passwordInput.type = "text";
-    document.getElementById(imgId).src = "../images/visibilityOn.svg";
+    document.getElementById(imgId).src = "../assets/img/icons/visibilityOn.svg";
   }else {
     passwordInput.type = "password";
-    document.getElementById(imgId).src = "../images/visibilityOff.svg";
+    document.getElementById(imgId).src = "../assets/img/icons/visibilityOff.svg";
   }
   
 }

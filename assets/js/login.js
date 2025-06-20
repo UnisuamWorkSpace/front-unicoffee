@@ -6,10 +6,10 @@ function showPassword () {
    
     if(passwordInput.type === "password") {
       passwordInput.type = "text";
-      document.getElementById("toggle-img").src = "../images/visibilityOn.svg";
+      document.getElementById("toggle-img").src = "../assets/img/icons/visibilityOn.svg";
     }else {
       passwordInput.type = "password";
-      document.getElementById("toggle-img").src = "../images/visibilityOff.svg";
+      document.getElementById("toggle-img").src = "../assets/img/icons/visibilityOff.svg";
     }
     
   }

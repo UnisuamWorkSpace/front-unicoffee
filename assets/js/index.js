@@ -270,7 +270,7 @@ function updateCartDisplay() {
             <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
         </div>
         <div class="fecharCompra">
-            <span><strong>Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}</strong></span>
+            <span><strong class="totalDaCompra">Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}</strong></span>
             <a href="./paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
         </div>
     `;
@@ -336,12 +336,12 @@ function updateCartDisplay() {
 
                     cartItem.querySelector("span:nth-child(4)").innerText = `Quantidade: ${total.toFixed(2).replace('.', ',')}`;
             
-                    document.querySelector(".totalDaCompra").innerText = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
+                    document.querySelector(".totalDaCompra").innerHTML = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 } else {
                     // Remove item from cart
                     cartItems.splice(itemIndex, 1);
                     cartItem.remove();
-                    document.querySelector(".totalDaCompra").innerText = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
+                    document.querySelector(".totalDaCompra").innerHTML = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 }
 
                 // Update localStorage and cart count

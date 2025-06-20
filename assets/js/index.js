@@ -241,6 +241,20 @@ document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
 let pedidosCarrinho = localStorage.getItem("pedidosCarrinho") || 0;
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
+function totalDeTudo() {
+    let totalAPagar = 0;
+
+    cartItems.forEach(item => {
+        const price = parseFloat(item.price.replace('R$', '').replace(',', '.'));
+        const quantity = Number(item.quantity);
+        totalAPagar += price * quantity;
+    });
+
+    console.log(totalAPagar);
+    return totalAPagar;
+}
+
+
 // Update item count in the cart (displays number of items in cart)
 document.querySelector(".item-count").innerHTML = pedidosCarrinho;
 
@@ -255,7 +269,10 @@ function updateCartDisplay() {
             <span>Carrinho</span>
             <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
         </div>
-        <a href="./paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+        <div class="fecharCompra">
+            <span><strong>Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}</strong></span>
+            <a href="./paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+        </div>
     `;
     }else {
         cartContainer.innerHTML = `
@@ -263,13 +280,20 @@ function updateCartDisplay() {
             <span>Carrinho</span>
             <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
         </div>
-        <a href="./pages/paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+        <div class="fecharCompra">
+            <span><strong class="totalDaCompra">Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}</strong></span>
+            <a href="./pages/paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+        </div>
     `;
     }
     
 
     // Render each item in the cart
     cartItems.forEach(item => {
+        const total = parseFloat(item.price.slice(3).replace(',', '.')) * item.quantity;
+        
+        
+        
         cartContainer.innerHTML += `
             <div class="cart-item">
                 <img src="${item.src}" class="cart-container-img" />
@@ -277,10 +301,12 @@ function updateCartDisplay() {
                     <span><strong>${item.name}</strong></span>
                     <span>${item.price}</span>
                     <span>Quantidade: ${item.quantity}</span>
-                    <label class="trash-can"><i class="fas fa-trash-alt"></i></label>
+                    <span>Total: R$ ${total.toFixed(2).replace('.', ',')}</span>
+                    <label class="trash-can">Remover Item: <i class="fas fa-trash-alt"></i></label>
                 </div>
             </div>
         `;
+        
     });
 
     // Reattach the event listeners for trash can buttons
@@ -305,10 +331,17 @@ function updateCartDisplay() {
 
                     // Update the quantity display
                     cartItem.querySelector("span:nth-child(3)").innerText = `Quantidade: ${item.quantity}`;
+
+                    const total = parseFloat(item.price.slice(3).replace(',', '.')) * item.quantity;
+
+                    cartItem.querySelector("span:nth-child(4)").innerText = `Quantidade: ${total.toFixed(2).replace('.', ',')}`;
+            
+                    document.querySelector(".totalDaCompra").innerText = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 } else {
                     // Remove item from cart
                     cartItems.splice(itemIndex, 1);
                     cartItem.remove();
+                    
                 }
 
                 // Update localStorage and cart count

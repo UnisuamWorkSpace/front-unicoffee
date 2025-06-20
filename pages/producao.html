@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniCoffee</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logos/uniCoffee_logo.png"/>
+    <link rel="stylesheet" href="../assets/css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script type="module" src="./assets/js/carousel.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/carousel.css"/>
+</head>
+<body>
+    <a href="#navbar"><div id="botao-de-subir" class="botao-de-subir"><i class="fas fa-chevron-up"></i></div></a>
+    <div id="mainPageErrorMsg"></div>
+
+    <header>
+
+    <nav id="navbar" class="navbar">  
+
+        <input type="checkbox" id="check" data-target="navbar-center" onchange="isChecked(event)">
+        <label id="menu-check" for="check" class="check-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        
+        <div class="navbar-left">
+            <a href="../index.html" class="logo"></a>
+        </div>
+
+        <div id="navbar-center" class="navbar-center ">
+            
+            <div id="profile-mobile" class="profile-container profile-container-mobile">
+                <input type="checkbox" data-target="profile-dropdown-mobile" id="profile-check-mobile" onchange="isChecked(event)">  
+                <label id="check-profile" class="profile" for="profile-check-mobile">
+                   <i class="fas fa-user-circle"></i>
+                   <span class="greeting"></span>
+                </label>
+                
+            <div id="profile-dropdown-mobile" class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='./index.html' class='tamanho-da-fonte logOut'>Sair</a>
+                </div>
+            </div>
+
+            <div class="dropdown">    
+                <button id="cafes-btn" class="dropdown-btn tamanho-da-fonte">Cafés <i class="fa fa-caret-down"></i> </button>
+                
+                <div class="dropdown-content cafes-minWidth">
+                    <a href="../index.html#moidos">Moídos </a>
+                    <a href="../index.html#graos">Em grãos</a>
+                    <a href="../index.html#capsulas">Em cápsulas</a>
+                </div>
+            </div>
+
+            <div class="dropdown">     
+                <button id="cafeteria-btn" class="dropdown-btn tamanho-da-fonte">Cafeteiras <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content cafeteira-minWidth">
+                    <a href="#philco">Philco</a>
+                    <a href="#dolceGusto">Dolce Gusto</a>
+                    <a href="#tresCoracoes">Três Corações</a>
+                </div>
+            </div>
+
+            <div class="dropdown">  
+                <button class="dropdown-btn tamanho-da-fonte">Acessórios <i class="fa fa-caret-down"></i></button>
+                
+                <div class="dropdown-content ">
+                    <a href="./acessorios.html#termicas">Garrafas Térmicas</a>
+                    <a href="./acessorios.html#filtros">Filtros</a>
+                    <a href="./acessorios.html#moedores">Moedores</a>
+                </div>
+            </div>
+                   
+        </div>
+
+        <div class="navbar-right">
+
+            <input type="checkbox" id="cart-check" data-target="cart-container" onchange="isChecked(event)">
+            <label for="cart-check" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="item-count"></span>
+            </label>
+             <div id="cart-container" class="cart-container">
+                <div class="fechar-carrinho">
+                    <span>Carrinho</span>
+                    <label for="cart-check" id="close-cart"><i class="fas fa-times-circle"></i></label>
+                </div>
+               <a href="./paginaDeErro.html" class="fechar-pedido"><i class="fas fa-lock"></i>Fechar Pedido</a>
+            </div>
+
+            <button id="aumentar-fonte" class="botao-de-fonte tamanho-da-fonte">A+</button>
+            <button id="diminuir-fonte" class="botao-de-fonte tamanho-da-fonte">A-</button>
+            <button id="tema"><img src="../assets/img/theme/dark_theme.svg" height="25px"/></button> 
+
+             <div id="profile-pc" class="profile-container">
+                <input type="checkbox" data-target="profle-pc-dropdown" id="profile-check" onchange="isChecked(event)">  
+                <label id="check-profile" class="profile" for="profile-check">
+                   <i class="fas fa-user-circle"></i>
+                   <span class="greeting"></span>
+                </label>
+                
+                <div id="profle-pc-dropdown"class="profile-dropdown">
+                             
+                    <span class="minhaConta">Minha Conta</span>
+                    <a href="./login.html" class="tamanho-da-fonte opcao">Login</a>
+                    <a href="./cadastro.html" class="tamanho-da-fonte opcao">Cadastre-se</a>
+                    <a href='../index.html' class='tamanho-da-fonte logOut'>Sair</a>
+                </div>
+            </div>
+        </div>   
+
+    </nav>
+    </header>
+    <main class="sobre">
+        <section class="producao">
+            <h1>SOBRE NÓS</h1>
+            <h3>Bem-vindo à UniCoffee – O melhor do café nacional e arábico ☕</h3>
+            <p>Somos uma <strong>revendedora de marcas renomadas</strong> do cenário nacional e internacional, especializada em cafés especiais. Além disso, desenvolvemos nossa <strong>própria linha exclusiva</strong>, com pequenas edições selecionadas que expressam nossa essência e compromisso com a qualidade.</p>
+            <hr>
+        </section>
+        <section class="producao">
+            <h2>Nossa História</h2>
+            <h3>Inspirados por grandes nomes do setor, unimos paixão e expertise para trazer o universo do café direto para você:</h3>
+            <ul class="diferencial ">
+                <li>
+                    <p><strong>Revenda:</strong> Trabalhamos com as principais marcas de cafés nacionais e arábicos, oferecendo uma seleção premium que atende aos mais exigentes paladares.</p>
+                </li>
+                <li>
+                    <p><strong>Nossa Linha:</strong> Produzida em lotes exclusivos, em parceria com produtores selecionados, nossa marca própria reflete os sabores mais autênticos e sofisticados do café.</p>
+                </li>
+            </ul>
+            <hr>
+        </section>
+        
+        <section class="producao">
+            <h2>Nossas Variedades</h2>
+            <span>Embora nossa linha própria seja enxuta, cada variedade é <strong>cuidadosamente escolhida:</strong></span>
+            <ul class="diferencial ">
+                <li>
+                    <p>Grãos 100 % Arábica, cultivados em altitudes ideais;</p>
+                </li>
+                <li>
+                    <p>Processamento artesanal e torra realizada em instalações parceiras de alta qualidade;</p>
+                </li>
+                <li>
+                    <p>Perfis sensoriais que vão do espresso encorpado a blends suaves e aromáticos.</p>
+                </li>
+            </ul>
+            <hr>
+        </section>
+        
+        <section class="producao">
+            <h2>Diferenciais UniCoffee</h2>
+            <ol class="diferencial" >
+                <li>
+                    <p><strong>Seleção criteriosa</strong> de marcas parceiras, priorizando sabor e procedência.</p>
+                </li>
+                <li>
+                    <p><strong>Produtos próprios exclusivos</strong>, com qualidade gourmet e edição limitada.</p>
+                </li>
+                <li>
+                    <p><strong>Atenção total aos detalhes:</strong> da escolha do grão até a xícara.</p>
+                </li>
+                <li>
+                    <p><strong>Atendimento personalizado</strong>, focado em transformar sua experiência com café.</p>
+                </li>
+            </ol>
+            <hr>
+        </section>
+
+        <section class="producao">
+            <h2>Nossa Visão</h2>
+            <p>Ser referência em cafés especiais no Brasil, conectando tradição e inovação. Queremos que cada xícara seja um convite a descobrir novos sabores e histórias.</p>
+        </section>
+    </main>
+
+
+</body>
+</html>

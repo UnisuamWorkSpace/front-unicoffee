@@ -1154,3 +1154,14 @@ body.dark-theme .cart-container:hover button * {
 .trash-can {
     cursor:pointer;
 }
+
+body.dark-theme .fechar-pedido {
+    border: solid 1px burlywood;
+}
+
+.fecharCompra {
+    order: 1000;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}

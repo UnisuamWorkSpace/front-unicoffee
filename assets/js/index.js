@@ -191,53 +191,6 @@ window.addEventListener("scroll", () => {
     }
 });
 
-  /*   let pedidosCarrinho = localStorage.getItem("pedidosCarrinho") || 0;
-    document.querySelector(".item-count").innerHTML = pedidosCarrinho;
-document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
-
-    
-    
-    addCartBtn.addEventListener("click", function () {
-        
-        pedidosCarrinho++; 
-
-        
-        const itemContainer = this.closest(".itens-container");
-        
-        document.querySelector(".cart-container").innerHTML += `
-    <div class="cart-item">
-        <img src='${itemContainer.querySelector("img.zoom").src}' class="cart-container-img" />
-        <div class="descricao-e-preco">
-        <span><strong>${itemContainer.querySelector("span strong").innerText}</strong></span>
-        <span>${itemContainer.querySelector(".price").innerText}</span>
-        <label class="trash-can"><i class="fas fa-trash-alt"></i></label>
-        </div>
-    </div>
-`;
-        if(document.querySelectorAll(".trash-can")) {
-
-            document.querySelectorAll(".trash-can").forEach(trashCan => {
-            trashCan.addEventListener("click", function() {
-                this.closest(".cart-item").remove();
-            });
-            });
-        };
-
-    
-        document.querySelector(".item-count").innerHTML = pedidosCarrinho;
-        addCartBtn.innerHTML = '<i class="fas fa-check"></i>';
-        
-        setTimeout(() => {
-            addCartBtn.innerHTML = 'ADICIONAR AO CARRINHO';
-        }, 800);
-       
-        localStorage.setItem("pedidosCarrinho", pedidosCarrinho);
-    });
-    
-}); */
-
-
-// Initialize pedidosCarrinho and cartItems
 let pedidosCarrinho = localStorage.getItem("pedidosCarrinho") || 0;
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
@@ -254,14 +207,12 @@ function totalDeTudo() {
 }
 
 
-// Update item count in the cart (displays number of items in cart)
+
 document.querySelector(".item-count").innerHTML = pedidosCarrinho;
 
-// Update the cart display
 function updateCartDisplay() {
     const cartContainer = document.querySelector(".cart-container");
 
-    // Clear current cart items before rendering the new ones
     if(window.location.pathname.endsWith("cafeteiras.html")  || window.location.pathname.endsWith("acessorios.html")) {
         cartContainer.innerHTML = `
         <div class="fechar-carrinho">
@@ -286,8 +237,6 @@ function updateCartDisplay() {
     `;
     }
     
-
-    // Render each item in the cart
     cartItems.forEach(item => {
         const total = parseFloat(item.price.replace('R$', '').replace(',', '.')) * item.quantity;
         
@@ -308,7 +257,6 @@ function updateCartDisplay() {
         
     });
 
-    // Reattach the event listeners for trash can buttons
     document.querySelectorAll(".trash-can").forEach(trashCan => {
         trashCan.addEventListener("click", function() {
             const cartItem = this.closest(".cart-item");
@@ -316,7 +264,6 @@ function updateCartDisplay() {
             const itemName = cartItem.querySelector("strong").innerText;
             const itemPrice = cartItem.querySelector(".descricao-e-preco span:nth-child(2)").innerText;
 
-            // Find the item in the cartItems array
             const itemIndex = cartItems.findIndex(item => 
                 item.src === itemImage && item.name === itemName && item.price === itemPrice
             );
@@ -325,10 +272,9 @@ function updateCartDisplay() {
                 const item = cartItems[itemIndex];
 
                 if (item.quantity > 1) {
-                    // Decrease quantity
+
                     item.quantity--;
 
-                    // Update the quantity display
                     cartItem.querySelector("span:nth-child(3)").innerText = `Quantidade: ${item.quantity}`;
 
                     const total = parseFloat(item.price.replace('R$', '').replace(',', '.')) * item.quantity;
@@ -337,13 +283,11 @@ function updateCartDisplay() {
             
                     document.querySelector(".totalDaCompra").innerHTML = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 } else {
-                    // Remove item from cart
                     cartItems.splice(itemIndex, 1);
                     cartItem.remove();
                     document.querySelector(".totalDaCompra").innerHTML = `Total a Pagar: R$ ${totalDeTudo().toFixed(2).replace('.', ',')}`;
                 }
 
-                // Update localStorage and cart count
                 pedidosCarrinho--;
                 localStorage.setItem("pedidosCarrinho", pedidosCarrinho);
                 localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -353,7 +297,6 @@ function updateCartDisplay() {
     });
 }
 
-// Function to add item to the cart
 document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
     addCartBtn.addEventListener("click", function () {
         const itemContainer = this.closest(".itens-container");
@@ -361,16 +304,15 @@ document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
         const itemName = itemContainer.querySelector("span strong").innerText;
         const itemPrice = itemContainer.querySelector(".price").innerText;
 
-        // Check if item already exists in cart
         const existingItemIndex = cartItems.findIndex(item => 
             item.src === itemImage && item.name === itemName && item.price === itemPrice
         );
 
         if (existingItemIndex !== -1) {
-            // If the item exists, increase quantity
+
             cartItems[existingItemIndex].quantity++;
         } else {
-            // If the item doesn't exist, add it to the cart with quantity 1
+
             cartItems.push({
                 src: itemImage,
                 name: itemName,
@@ -379,18 +321,14 @@ document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
             });
         }
 
-        // Increase item count in the cart and update localStorage
         pedidosCarrinho++;
         localStorage.setItem("pedidosCarrinho", pedidosCarrinho);
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
 
-        // Update the cart display
         updateCartDisplay();
 
-        // Show the updated item count
         document.querySelector(".item-count").innerHTML = pedidosCarrinho;
 
-        // Change button text to "Added"
         this.innerHTML = '<i class="fas fa-check"></i>';
         setTimeout(() => {
             this.innerHTML = 'ADICIONAR AO CARRINHO';
@@ -398,7 +336,6 @@ document.querySelectorAll(".addCart-btn").forEach(addCartBtn => {
     });
 });
 
-// Call the updateCartDisplay function on page load to render the cart items
 window.onload = updateCartDisplay;
 
 window.isChecked = function (event) {

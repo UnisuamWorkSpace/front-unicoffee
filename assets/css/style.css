@@ -1181,6 +1181,7 @@ body.dark-theme .fechar-pedido {
     background-color: #EAD7BC;
     
 }
+
 .producao2 * {
     text-align: justify;
     max-width: 718px;
@@ -1200,9 +1201,18 @@ body.dark-theme .fechar-pedido {
 .producao2 span {
     font-size:23px;
 }
- hr {
-    background-color: #A62C2C 
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #3e1f0d;
+    width: 100%;
+}
+
+ body.dark-theme hr {
+    background-color: burlywood;
  }
+
  body.dark-theme .producao2{
     background-color: #3e1f0d;
 }

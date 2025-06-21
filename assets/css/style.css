@@ -1183,7 +1183,7 @@ body.dark-theme .fechar-pedido {
 }
 .producao2 * {
     text-align: justify;
-    width: 718px;
+    max-width: 718px;
     margin: 0 0 30px 0;
     padding: 0;
 

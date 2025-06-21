@@ -250,7 +250,6 @@ function totalDeTudo() {
         totalAPagar += price * quantity;
     });
 
-    console.log(totalAPagar);
     return totalAPagar;
 }
 
